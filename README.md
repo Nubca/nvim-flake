@@ -1,3 +1,5 @@
+# THE BELOW IS UNCHANGED FROM ORIGINAL FORK
+
 # Finally
 After much struggling I've figured out how to make a neovim flake which works how I want it too
 
