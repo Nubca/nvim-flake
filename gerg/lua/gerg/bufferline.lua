@@ -29,7 +29,7 @@ require("bufferline").setup({
     offsets = { { filetype = "NvimTree", text = "File Explorer", text_align = "left" } },
     sort_by = "extension",
     diagnostics = "nvim_lsp",
-    diagnostics_update_in_insert = true,
+    vim.diagnostic.config { update_in_insert = true },
     diagnostics_indicator = function(_, _, diagnostics_dict, _)
       local s = ""
       for e, n in pairs(diagnostics_dict) do
