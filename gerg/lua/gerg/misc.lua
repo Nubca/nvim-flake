@@ -14,6 +14,7 @@ vim.o.splitbelow = true
 vim.o.splitright = true
 vim.o.signcolumn = "yes:2"
 vim.o.ai = true
+vim.o.undofile = true
 vim.o.swapfile = false
 vim.o.backup = false
 vim.o.writebackup = false
@@ -21,12 +22,14 @@ vim.o.visualbell = false
 vim.o.errorbells = false
 vim.o.number = true
 vim.o.relativenumber = true
-vim.o.clipboard = vim.o.clipboard .. "unnamedplus"
-vim.o.wrap = false
+-- vim.o.clipboard = vim.o.clipboard .. "unnamedplus"
+vim.o.cursorline = true
+vim.o.cursorcolumn = true
+vim.o.showbreak = "↪ "
 vim.o.hlsearch = false
 vim.o.incsearch = true
 vim.o.termguicolors = true
-vim.o.guifont = "OverpassMono Nerd Font:h10"
+vim.o.guifont = "JetBrainsMono Nerd Font:h14:w-1"
 vim.o.spell = true
 vim.o.spelllang = "en_us"
 
@@ -44,14 +47,14 @@ vim.g.mapleader = " "
 vim.g.indentLine_setConceal = 0
 
 -- SECTION: theme
-vim.g.moonflyCursorColor = true
-vim.g.moonflyNormalFloat = true
-vim.g.moonflyTerminalColors = true
-vim.g.moonflyTransparent = true
-vim.g.moonflyUndercurls = true
-vim.g.moonflyUnderlineMatchParen = true
-vim.g.moonflyVirtualTextColor = true
-vim.cmd.colorscheme("moonfly")
+-- vim.g.moonflyCursorColor = true
+-- vim.g.moonflyNormalFloat = true
+-- vim.g.moonflyTerminalColors = true
+-- vim.g.moonflyTransparent = true
+-- vim.g.moonflyUndercurls = true
+-- vim.g.moonflyUnderlineMatchParen = true
+-- vim.g.moonflyVirtualTextColor = true
+vim.cmd.colorscheme("kanagawa")
 
 -- SECTION: cinnamon
 require("cinnamon").setup()
