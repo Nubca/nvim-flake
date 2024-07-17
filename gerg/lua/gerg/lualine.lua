@@ -2,7 +2,7 @@
 require("lualine").setup({
   options = {
     icons_enabled = true,
-    theme = "onedark",
+    theme = "auto",
     component_separators = { "", "" },
     section_separators = { "", "" },
     disabled_filetypes = { "packer", "NvimTree", "alpha" },
@@ -33,7 +33,10 @@ require("lualine").setup({
     lualine_y = {
       {
         "fileformat",
-        color = { bg = "none" },
+      },
+      {
+        "filetype",
+        color = { bg = "none", fg = "lavender" },
       },
       {
         "progress",
@@ -41,10 +44,6 @@ require("lualine").setup({
           bg = "none",
           fg = "lavender",
         },
-      },
-      {
-        "filetype",
-        color = { bg = "none", fg = "lavender" },
       },
     },
     lualine_z = {
