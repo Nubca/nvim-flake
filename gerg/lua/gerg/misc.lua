@@ -25,6 +25,7 @@ vim.o.relativenumber = true
 -- vim.o.clipboard = vim.o.clipboard .. "unnamedplus"
 vim.o.cursorline = true
 vim.o.cursorcolumn = true
+vim.o.colorcolumn = "100"
 vim.o.showbreak = "↪ "
 vim.o.hlsearch = false
 vim.o.incsearch = true
@@ -35,7 +36,7 @@ vim.o.spelllang = "en_us"
 
 vim.opt.shortmess:append({ I = true })
 
---vim herasy
+--vim heresy
 vim.cmd.aunmenu({ "PopUp.How-to\\ disable\\ mouse" })
 vim.cmd.aunmenu({ "PopUp.-1-" })
 
@@ -54,7 +55,7 @@ vim.g.indentLine_setConceal = 0
 -- vim.g.moonflyUndercurls = true
 -- vim.g.moonflyUnderlineMatchParen = true
 -- vim.g.moonflyVirtualTextColor = true
-vim.cmd.colorscheme("kanagawa")
+vim.cmd("colorscheme kanagawa")
 
 -- SECTION: cinnamon
 require("cinnamon").setup()
@@ -71,6 +72,11 @@ vim.keymap.set("n", "<leader>ct", "<cmd> ColorizerToggle<CR>")
 
 -- SECTION: whichkey
 require("which-key").setup({})
+
+-- SECTION: telekasten
+ require('telekasten').setup({
+  home = vim.fn.expand("~/Documents/PKM"), -- Put the name of your notes directory here
+}) 
 
 require("toggleterm").setup({
   open_mapping = [[<Leader>e]],
