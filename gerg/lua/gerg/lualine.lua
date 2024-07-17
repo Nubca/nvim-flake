@@ -2,7 +2,7 @@
 require("lualine").setup({
   options = {
     icons_enabled = true,
-    theme = "kanagawa",
+    theme = "onedark",
     component_separators = { "", "" },
     section_separators = { "", "" },
     disabled_filetypes = { "packer", "NvimTree", "alpha" },
@@ -13,24 +13,23 @@ require("lualine").setup({
       {
         "filename",
         color = { bg = "none" },
-        symbols = { modified = "", readonly = "" },
+        symbols = { modified = " ", readonly = " " },
       },
     },
     lualine_c = {
       {
         "branch",
-        icon = " = ",
+        icon = " =",
         separator = { right = ")" },
       },
     },
-    lualine_w = {
+    lualine_x = {
       {
         "diagnostics",
         sources = { "nvim_lsp", "nvim_diagnostic" },
         symbols = { error = "", warn = "", info = "", hint = "" },
       },
     },
-    lualine_x = { "mode" },
     lualine_y = {
       {
         "fileformat",

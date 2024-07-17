@@ -12,12 +12,12 @@ require("oil").setup({
   },
 })
 
-vim.keymap.set("n", "<leader>tt", "<CMD>Oil<CR>", { desc = "Open parent directory" })
+vim.keymap.set("n", "<leader>tt", "<CMD>Oil<CR>", { desc = "Open containing directory" })
 
-local wk = require("which-key")
-wk.add({
-  o = {
-    name = "oil file explorer",
-    ["."] = { "<cmd>Oil<cr>", "Open containing directory", },
-  },
-}, { prefix = "<leader>", })
+-- local wk = require("which-key")
+-- wk.add({
+--   o = {
+--     name = "oil file explorer",
+--     ["."] = { "<cmd>Oil<cr>", "Open containing directory", },
+--   },
+-- }, { prefix = "<leader>", })
