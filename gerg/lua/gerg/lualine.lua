@@ -35,8 +35,6 @@ require("lualine").setup({
         "fileformat",
         color = { bg = "none" },
       },
-    },
-    lualine_z = {
       {
         "progress",
         color = {
@@ -45,22 +43,24 @@ require("lualine").setup({
         },
       },
       {
-        "location",
-        color = { bg = "none", fg = "lavender" },
-      },
-      {
         "filetype",
         color = { bg = "none", fg = "lavender" },
+      },
+    },
+    lualine_z = {
+      {
+        "location",
+        -- color = { bg = "none", fg = "lavender" },
       },
     },
   },
   inactive_sections = {
     lualine_a = {},
-    lualine_b = {},
-    lualine_c = { "filename" },
-    lualine_x = { "location" },
+    lualine_b = { "filename" },
+    lualine_c = {},
+    lualine_x = {},
     lualine_y = {},
-    lualine_z = {},
+    lualine_z = { "location" },
   },
   tabline = {},
   extensions = { "nvim-tree" },
