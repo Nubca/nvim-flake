@@ -156,6 +156,18 @@
       "url": "https://github.com/lukas-reineke/indent-blankline.nvim/archive/65e20ab94a26d0e14acac5049b8641336819dfc7.tar.gz",
       "hash": "14v9mglm2zykylga0lzh9w1vcmxixya7xg2k4z4m6f4a3l21farx"
     },
+    "kanagawa.nvim": {
+      "type": "Git",
+      "repository": {
+        "type": "GitHub",
+        "owner": "rebelot",
+        "repo": "kanagawa.nvim"
+      },
+      "branch": "master",
+      "revision": "e5f7b8a804360f0a48e40d0083a97193ee4fcc87",
+      "url": "https://github.com/rebelot/kanagawa.nvim/archive/e5f7b8a804360f0a48e40d0083a97193ee4fcc87.tar.gz",
+      "hash": "1066495w73a11kdpm8iah3k0pjf766ylf21jk8gjid73byl2lz0n"
+    },
     "lazydev.nvim": {
       "type": "Git",
       "repository": {
