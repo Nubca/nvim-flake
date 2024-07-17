@@ -24,7 +24,7 @@ vim.o.number = true
 vim.o.relativenumber = true
 -- vim.o.clipboard = vim.o.clipboard .. "unnamedplus"
 vim.o.cursorline = true
--- vim.o.cursorcolumn = true
+vim.o.cursorcolumn = true
 vim.o.colorcolumn = "100"
 vim.o.showbreak = "↪ "
 vim.o.hlsearch = false
@@ -74,9 +74,9 @@ vim.keymap.set("n", "<leader>ct", "<cmd> ColorizerToggle<CR>")
 require("which-key").setup({})
 
 -- SECTION: telekasten
- require('telekasten').setup({
-  home = vim.fn.expand("~/Documents/PKM"), -- Put the name of your notes directory here
-}) 
+--  require('telekasten').setup({
+--   home = vim.fn.expand("~/Documents/PKM"), -- Put the name of your notes directory here
+-- }) 
 
 require("toggleterm").setup({
   open_mapping = [[<Leader>e]],

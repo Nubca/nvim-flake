@@ -26,6 +26,15 @@ require("noice").setup({
     input = {},
   },
 
+  views = {
+    cmdline_popup = {
+      position = {
+        col = "50%",
+        row = "85%",
+      },
+    },
+  },
+
   -- Hide written messages
   routes = {
     {
