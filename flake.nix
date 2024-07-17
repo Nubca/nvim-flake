@@ -152,7 +152,7 @@
                     version = builtins.substring 0 8 pin.revision;
                   }
                 )
-              ) (lib.importJSON "${self}/sources.json").pins;
+              ) (lib.importJSON "${self}/npins/sources.json").pins;
 
             extraBinPath = builtins.attrValues {
 
