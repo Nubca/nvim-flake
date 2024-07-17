@@ -19,17 +19,18 @@ require("lualine").setup({
     lualine_c = {
       {
         "branch",
-        icon = " •",
-        separator = { left = "(", right = ")" },
+        icon = " = ",
+        separator = { right = ")" },
       },
     },
-    lualine_x = {
+    lualine_w = {
       {
         "diagnostics",
         sources = { "nvim_lsp", "nvim_diagnostic" },
-        symbols = { error = "", warn = "", info = "", hint = "" },
+        symbols = { error = "", warn = "", info = "", hint = "" },
       },
     },
+    lualine_x = { "mode" },
     lualine_y = {
       {
         "fileformat",

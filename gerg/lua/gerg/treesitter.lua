@@ -25,7 +25,7 @@ require("treesitter-context").setup({
   on_attach = nil,
 })
 
--- rainbow_dilimiters
+-- rainbow_delimiters
 local rainbow_delimiters = require("rainbow-delimiters")
 
 vim.g.rainbow_delimiters = {
