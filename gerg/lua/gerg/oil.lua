@@ -5,7 +5,12 @@
 -- end
 
 require("oil").setup({
-  columns = { "icon", "permissions", "size", "mtime", },
+  columns = {
+    "icon",
+    -- "permissions",
+    -- "size",
+    -- "mtime",
+  },
   view_options = {
     -- is_always_hidden = is_always_hidden,
     show_hidden = true,
