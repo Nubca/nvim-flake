@@ -44,6 +44,10 @@ vim.cmd.aunmenu({ "PopUp.-1-" })
 vim.keymap.set("n", " ", "<Nop>", { silent = true, remap = false })
 vim.g.mapleader = " "
 
+-- Remap for dealing with word wrap
+vim.keymap.set('n', 'k', "v:count == 0 ? 'gk' : 'k'", { expr = true, silent = true })
+vim.keymap.set('n', 'j', "v:count == 0 ? 'gj' : 'j'", { expr = true, silent = true })
+
 -- stop hiding double quotes in json files
 vim.g.indentLine_setConceal = 0
 
