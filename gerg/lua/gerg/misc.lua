@@ -70,6 +70,25 @@ require("ibl").setup({
 
 vim.g.cursorline_timeout = 0
 
+-- Show spaces when Highlighted
+vim.opt.listchars = {
+  space = '·',
+  trail = '·',
+  tab = '>·'
+}
+vim.api.nvim_create_autocmd({"ModeChanged"}, {
+  pattern = {"*:v", "*:V", "*:\x16"},
+  callback = function()
+    vim.opt.list = true
+  end
+})
+vim.api.nvim_create_autocmd({"ModeChanged"}, {
+  pattern = {"v:n", "V:n", "\x16:n"},
+  callback = function()
+    vim.opt.list = false
+  end
+})
+
 -- SECTION: colorizer
 require("colorizer").setup()
 vim.keymap.set("n", "<leader>ct", "<cmd> ColorizerToggle<CR>")
