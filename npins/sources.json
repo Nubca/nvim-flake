@@ -180,18 +180,6 @@
       "url": "https://github.com/folke/lazydev.nvim/archive/491452cf1ca6f029e90ad0d0368848fac717c6d2.tar.gz",
       "hash": "1yc87wv6g19yj1gypfy4nl9irpb7zfqlw98vyaf8aqjgnpd0z60g"
     },
-    "lazygit": {
-      "type": "Git",
-      "repository": {
-        "type": "GitHub",
-        "owner": "jesseduffield",
-        "repo": "lazygit"
-      },
-      "branch": "master",
-      "revision": "a3560eb451fcf375378a316cbc2f4e08e24bf756",
-      "url": "https://github.com/jesseduffield/lazygit/archive/a3560eb451fcf375378a316cbc2f4e08e24bf756.tar.gz",
-      "hash": "1kg9nzm7zdbf3kikalrd7dwwg9kg5ds3vscfi4pf6i75yw1yaiw3"
-    },
     "lspkind.nvim": {
       "type": "Git",
       "repository": {
