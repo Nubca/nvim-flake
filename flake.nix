@@ -89,6 +89,18 @@
           '';
         };
 
+      devShells =
+        { pkgs, system }:
+        {
+          default = pkgs.mkShell {
+            packages = [
+              self.packages.${system}.default
+              self.formatter.${system}
+              pkgs.npins
+            ];
+          };
+        };
+
       packages =
         { pkgs, system }:
         {
@@ -97,44 +109,24 @@
           neovim = mnw.lib.wrap pkgs {
             inherit (neovim-nightly.packages.${system}) neovim;
 
-            wrapperArgs = [
-              "--set-default"
+            bwrapArgs = [
+              "--setenv"
               "FZF_DEFAULT_OPTS"
               "--layout=reverse --inline-info"
             ];
 
             appName = "gerg";
 
-            luaFiles = [
-              (builtins.toFile "init.lua" ''
-                print('loaded lua file')
-              '')
-            ];
-            initLua = "print('loaded lua text')";
-
-            vimlFiles = [
-              (builtins.toFile "init.vim" ''
-                echomsg 'loaded vim file'
-              '')
-            ];
-            initViml = "echomsg 'loaded vim text'";
-
             extraLuaPackages = p: [ p.jsregexp ];
 
             withNodeJs = true;
             withPerl = true;
-            # loadDefaultRC = false;
+
+            # Add your lua config
+            configDir = ./gerg;
 
             plugins =
               [
-                #
-                # Package your lua config as a plugin
-                #
-                {
-                  pname = "gerg";
-                  version = self.shortRev or self.dirtyShortRev or "dirty";
-                  outPath = "${self}/gerg";
-                }
                 #
                 # Add plugins from nixpkgs here
                 #
@@ -146,13 +138,13 @@
                 #
                 pname: pin:
                 (
-                  (pkgs.npins.mkSource pin)
+                  pin
                   // {
                     inherit pname;
                     version = builtins.substring 0 8 pin.revision;
                   }
                 )
-              ) (lib.importJSON "${self}/npins/sources.json").pins;
+              ) (pkgs.callPackages ./npins/sources.nix { });
 
             extraBinPath = builtins.attrValues {
 
