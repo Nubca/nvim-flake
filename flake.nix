@@ -123,7 +123,7 @@
 
             withNodeJs = true;
             withPerl = true;
-            loadDefaultRC = false;
+            # loadDefaultRC = false;
 
             plugins =
               [
