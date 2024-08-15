@@ -54,13 +54,6 @@ vim.keymap.set('n', 'gk', 'k')
 vim.g.indentLine_setConceal = 0
 
 -- SECTION: theme
--- vim.g.moonflyCursorColor = true
--- vim.g.moonflyNormalFloat = true
--- vim.g.moonflyTerminalColors = true
--- vim.g.moonflyTransparent = true
--- vim.g.moonflyUndercurls = true
--- vim.g.moonflyUnderlineMatchParen = true
--- vim.g.moonflyVirtualTextColor = true
 vim.cmd("colorscheme kanagawa")
 
 -- SECTION: cinnamon
@@ -98,10 +91,7 @@ vim.keymap.set("n", "<leader>ct", "<cmd> ColorizerToggle<CR>")
 -- SECTION: whichkey
 require("which-key").setup({})
 
--- SECTION: telekasten
---  require('telekasten').setup({
---   home = vim.fn.expand("~/Documents/PKM"), -- Put the name of your notes directory here
--- }) 
+require("undotree").setup({})
 
 require("toggleterm").setup({
   open_mapping = [[<Leader>e]],
