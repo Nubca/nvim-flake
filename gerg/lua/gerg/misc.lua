@@ -91,8 +91,6 @@ vim.keymap.set("n", "<leader>ct", "<cmd> ColorizerToggle<CR>")
 -- SECTION: whichkey
 require("which-key").setup({})
 
-require("undotree").setup({})
-
 require("toggleterm").setup({
   open_mapping = [[<Leader>e]],
   direction = "float",
