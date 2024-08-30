@@ -50,6 +50,8 @@ vim.keymap.set('n', 'j', "v:count == 0 ? 'gj' : 'j'", { expr = true, silent = tr
 vim.keymap.set('n', 'gj', 'j')
 vim.keymap.set('n', 'gk', 'k')
 
+vim.keymap.set('n', '<leader><v>', vim.cmd.UndotreeToggle)
+
 -- stop hiding double quotes in json files
 vim.g.indentLine_setConceal = 0
 
