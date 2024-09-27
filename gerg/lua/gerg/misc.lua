@@ -22,6 +22,7 @@ vim.o.visualbell = false
 vim.o.errorbells = false
 vim.o.number = true
 vim.o.relativenumber = true
+vim.opt.statuscolumn = "%l %r"
 vim.o.clipboard = vim.o.clipboard .. "unnamedplus"
 vim.o.cursorline = true
 vim.o.cursorcolumn = true
@@ -96,7 +97,7 @@ vim.api.nvim_create_autocmd({"ModeChanged"}, {
 -- ]])
 
 -- Display both normal line and relative line numbers
-vim.opt.statuscolumn = [[%!v:lua.require'statuscolumn'.statuscolumn()]]
+-- vim.opt.statuscolumn = [[%!v:lua.require'statuscolumn'.statuscolumn()]]
 
 -- SECTION: colorizer
 require("colorizer").setup()
