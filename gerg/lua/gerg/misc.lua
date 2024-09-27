@@ -20,9 +20,8 @@ vim.o.backup = false
 vim.o.writebackup = false
 vim.o.visualbell = false
 vim.o.errorbells = false
-vim.wo.number = true
-vim.wo.relativenumber = true
-vim.opt.statuscolumn = "%r %l"
+vim.o.number = true
+vim.o.relativenumber = true
 vim.o.clipboard = vim.o.clipboard .. "unnamedplus"
 vim.o.cursorline = true
 vim.o.cursorcolumn = true
@@ -86,18 +85,6 @@ vim.api.nvim_create_autocmd({"ModeChanged"}, {
     vim.opt.list = false
   end
 })
-
--- Display normal lines #s in Normal Mode, Relative is Insert
--- vim.cmd([[
---   augroup numbertoggle
---     autocmd!
---     autocmd BufEnter,FocusGained,InsertLeave,WinEnter * if &nu && mode() != "i" | set rnu   | endif
---     autocmd BufLeave,FocusLost,InsertEnter,WinLeave   * if &nu                  | set nornu | endif
---   augroup END
--- ]])
-
--- Display both normal line and relative line numbers
--- vim.opt.statuscolumn = [[%!v:lua.require'statuscolumn'.statuscolumn()]]
 
 -- SECTION: colorizer
 require("colorizer").setup()
