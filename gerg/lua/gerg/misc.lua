@@ -86,6 +86,18 @@ vim.api.nvim_create_autocmd({"ModeChanged"}, {
   end
 })
 
+-- Display normal lines #s in Normal Mode, Relative is Insert
+-- vim.cmd([[
+--   augroup numbertoggle
+--     autocmd!
+--     autocmd BufEnter,FocusGained,InsertLeave,WinEnter * if &nu && mode() != "i" | set rnu   | endif
+--     autocmd BufLeave,FocusLost,InsertEnter,WinLeave   * if &nu                  | set nornu | endif
+--   augroup END
+-- ]])
+
+-- Display both normal line and relative line numbers
+vim.opt.statuscolumn = [[%!v:lua.require'statuscolumn'.statuscolumn()]]
+
 -- SECTION: colorizer
 require("colorizer").setup()
 vim.keymap.set("n", "<leader>ct", "<cmd> ColorizerToggle<CR>")
