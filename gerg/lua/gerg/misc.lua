@@ -55,15 +55,15 @@ vim.keymap.set('n', '<leader><v>', vim.cmd.UndotreeToggle)
 vim.g.indentLine_setConceal = 0
 
 -- SECTION: theme
--- vim.cmd("colorscheme kanagawa")
-vim.g.moonflyCursorColor = true
-vim.g.moonflyNormalFloat = true
-vim.g.moonflyTerminalColors = true
-vim.g.moonflyTransparent = true
-vim.g.moonflyUndercurls = true
-vim.g.moonflyUnderlineMatchParen = true
-vim.g.moonflyVirtualTextColor = true
-vim.cmd.colorscheme("moonfly")
+vim.cmd("colorscheme kanagawa")
+-- vim.g.moonflyCursorColor = true
+-- vim.g.moonflyNormalFloat = true
+-- vim.g.moonflyTerminalColors = true
+-- vim.g.moonflyTransparent = true
+-- vim.g.moonflyUndercurls = true
+-- vim.g.moonflyUnderlineMatchParen = true
+-- vim.g.moonflyVirtualTextColor = true
+-- vim.cmd.colorscheme("moonfly")
 
 vim.g.cursorline_timeout = 0
 
