@@ -62,6 +62,14 @@ vim.api.nvim_create_autocmd("ColorScheme", {
   end
 })
 
+vim.api.nvim_create_autocmd("VimEnter", {
+  callback = function()
+    if vim.fn.argc() == 0 and vim.fn.line2byte('$') == -1 then
+      vim.cmd('intro')
+    end
+  end
+})
+
 -- SECTION: theme
 vim.g.moonflyCursorColor = true
 vim.g.moonflyNormalFloat = true
