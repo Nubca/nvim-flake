@@ -94,7 +94,7 @@
         {
           default = pkgs.mkShell {
             packages = [
-              self.packages.${system}.default
+              self.packages.${system}.default.devMode
               self.formatter.${system}
               pkgs.npins
             ];
@@ -109,8 +109,8 @@
           neovim = mnw.lib.wrap pkgs {
             inherit (neovim-nightly.packages.${system}) neovim;
 
-            bwrapArgs = [
-              "--setenv"
+            wrapperArgs = [
+              "--set"
               "FZF_DEFAULT_OPTS"
               "--layout=reverse --inline-info"
             ];
@@ -122,11 +122,23 @@
             withNodeJs = true;
             withPerl = true;
 
-            # Add your lua config
-            configDir = ./gerg;
+            # Source lua config
+            initLua = ''
+              require('gerg')
+            '';
+
+            # Add lua config
+            devExcludedPlugins = [
+              ./gerg
+            ];
+            # Impure path to lua config for devShell
+            devPluginPaths = [
+              "/home/ca/Sources/nvim-flake/gerg"
+            ];
+
+            desktopEntry = false;
 
             plugins =
-
               [
                 # Add plugins from nixpkgs here
                 #

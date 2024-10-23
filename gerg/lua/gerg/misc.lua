@@ -1,47 +1,46 @@
 -- SECTION: basic
-vim.o.encoding = "utf-8"
-vim.o.mouse = "a"
-vim.o.tabstop = 2
-vim.o.shiftwidth = 2
-vim.o.softtabstop = 2
-vim.o.expandtab = true
-vim.o.cmdheight = 1
-vim.o.updatetime = 300
-vim.o.shortmess = vim.o.shortmess .. "c"
-vim.o.tm = 1000
-vim.o.hidden = true
-vim.o.splitbelow = true
-vim.o.splitright = true
-vim.o.signcolumn = "yes:2"
-vim.o.ai = true
-vim.o.undofile = true
-vim.o.swapfile = false
-vim.o.backup = false
-vim.o.writebackup = false
-vim.o.visualbell = false
-vim.o.errorbells = false
-vim.o.number = true
-vim.o.relativenumber = true
-vim.o.clipboard = vim.o.clipboard .. "unnamedplus"
-vim.o.cursorline = true
-vim.o.cursorcolumn = true
-vim.o.colorcolumn = "100"
-vim.o.showbreak = "↪ "
-vim.o.hlsearch = false
-vim.o.incsearch = true
-vim.o.termguicolors = true
-vim.o.guifont = "JetBrainsMono Nerd Font:h14:w-1"
-vim.o.spell = true
-vim.o.spelllang = "en_us"
+vim.opt.encoding = "utf-8"
+vim.opt.mouse = "a"
+vim.opt.tabstop = 2
+vim.opt.shiftwidth = 2
+vim.opt.softtabstop = 2
+vim.opt.expandtab = true
+vim.opt.smartindent = true
+vim.opt.cmdheight = 1
+vim.opt.updatetime = 100
+vim.opt.tm = 1000
+vim.opt.hidden = true
+vim.opt.undofile = true
+vim.opt.splitbelow = true
+vim.opt.splitright = true
+vim.opt.signcolumn = "yes:2"
+vim.opt.ai = true
+vim.opt.swapfile = false
+vim.opt.backup = false
+vim.opt.writebackup = false
+vim.opt.visualbell = false
+vim.opt.errorbells = false
+vim.opt.number = true
+vim.opt.relativenumber = true
+vim.opt.clipboard = "unnamedplus"
+vim.opt.cursorline = true
+vim.opt.cursorcolumn = true
+vim.opt.colorcolumn = "100"
+vim.opt.showbreak = "↪ "
+vim.opt.hlsearch = false
+vim.opt.incsearch = true
+vim.opt.termguicolors = true
+vim.opt.guifont = "JetBrainsMono Nerd Font:h14:w-1"
+vim.opt.spell = true
+vim.opt.spelllang = "en_us"
 
-vim.opt.shortmess:append({ I = true })
+vim.opt.shortmess:append({ I = true, c = true })
 
 --vim heresy
 vim.cmd.aunmenu({ "PopUp.How-to\\ disable\\ mouse" })
 vim.cmd.aunmenu({ "PopUp.-1-" })
 
 -- map leader to <Space>
-vim.keymap.set("n", " ", "<Nop>", { silent = true, remap = false })
 vim.g.mapleader = " "
 
 -- Remap for dealing with word wrap
@@ -56,14 +55,15 @@ vim.keymap.set('n', '<leader><v>', vim.cmd.UndotreeToggle)
 vim.g.indentLine_setConceal = 0
 
 -- SECTION: theme
-vim.cmd("colorscheme kanagawa")
-
--- SECTION: cinnamon
-require("cinnamon").setup()
--- SECTION: indent blankline
-require("ibl").setup({
-  indent = { char = "┋" },
-})
+-- vim.cmd("colorscheme kanagawa")
+vim.g.moonflyCursorColor = true
+vim.g.moonflyNormalFloat = true
+vim.g.moonflyTerminalColors = true
+vim.g.moonflyTransparent = true
+vim.g.moonflyUndercurls = true
+vim.g.moonflyUnderlineMatchParen = true
+vim.g.moonflyVirtualTextColor = true
+vim.cmd.colorscheme("moonfly")
 
 vim.g.cursorline_timeout = 0
 
@@ -91,7 +91,30 @@ require("colorizer").setup()
 vim.keymap.set("n", "<leader>ct", "<cmd> ColorizerToggle<CR>")
 
 -- SECTION: whichkey
-require("which-key").setup({})
+WK = require("which-key")
+WK.add({ " ", "<Nop>", { silent = true, remap = false }})
+WK.setup()
+WK.add({
+  {
+    { "<leader>c", "<cmd> ColorizerToggle<CR>", desc = "toggle Colorizer" },
+  },
+  {
+    mode = { "v" },
+    { "J", ":m '>+1<CR>gv=gv" },
+    { "K", ":m '<-2<CR>gv=gv" },
+  },
+  {
+    { "C-d>", "<C-d>zz" },
+    { "C-u>", "<C-u>zz" },
+    { "n", "nzzzv" },
+    { "N", "Nzzzv" },
+    { "Q", "<nop>" },
+  },
+  {
+    mode = { "x" },
+    { "<leader>p", '"_dP' },
+  },
+})
 
 require("toggleterm").setup({
   open_mapping = [[<Leader>e]],

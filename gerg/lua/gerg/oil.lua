@@ -33,6 +33,6 @@ require("oil").setup({
     border = "rounded",
   },
 })
-
-vim.keymap.set("n", "<leader>tt", "<CMD>Oil --float<CR>", { desc = "Open containing directory" })
-
+WK.add({
+  { "<leader>o", "<CMD>Oil --float<CR>", desc = "Open containing directory" },
+})

@@ -2,7 +2,7 @@
 require("lualine").setup({
   options = {
     icons_enabled = true,
-    theme = "auto",
+    theme = "moonfly",
     component_separators = { "", "" },
     section_separators = { "", "" },
     disabled_filetypes = { "packer", "NvimTree", "alpha" },
@@ -20,7 +20,7 @@ require("lualine").setup({
       {
         "branch",
         icon = " =",
-        separator = { right = ")" },
+        separator = { left = "(", right = ")" },
       },
     },
     lualine_x = {
@@ -33,6 +33,7 @@ require("lualine").setup({
     lualine_y = {
       {
         "fileformat",
+        color = { bg = "none" },
       },
       {
         "filetype",
@@ -49,17 +50,21 @@ require("lualine").setup({
     lualine_z = {
       {
         "location",
-        -- color = { bg = "none", fg = "lavender" },
+        color = { bg = "none", fg = "lavender" },
       },
+      {
+        "filetype",
+        color = { bg = "none", fg = "lavender" },
+      }
     },
   },
   inactive_sections = {
     lualine_a = {},
-    lualine_b = { "filename" },
-    lualine_c = {},
-    lualine_x = {},
+    lualine_b = {},
+    lualine_c = { "filename" },
+    lualine_x = { "location" },
     lualine_y = {},
-    lualine_z = { "location" },
+    lualine_z = {},
   },
   tabline = {},
   extensions = { "nvim-tree" },

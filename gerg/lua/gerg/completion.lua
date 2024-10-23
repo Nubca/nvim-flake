@@ -1,6 +1,9 @@
 local cmp = require("cmp")
 local luasnip = require("luasnip")
 local lspkind = require("lspkind")
+local winhighlight = {
+  winhighlight = "Normal:NormalFloat,FloatBorder:FloatBorder,CursorLine:PmenuSel",
+}
 
 local has_words_before = function()
   unpack = unpack or table.unpack
@@ -60,7 +63,13 @@ cmp.setup({
   },
   -- format entries in the completion popup
   formatting = {
-    format = lspkind.cmp_format(),
+    format = lspkind.cmp_format({
+      mode = 'symbol_text',
+      maxwidth = 50,
+      ellipsis_char = '...',
+    }),
+    fields = { "abbr", "kind", "menu" },
+    expandable_indicator = true,
   },
   sources = {
     -- preference order of each completion source
@@ -78,8 +87,8 @@ cmp.setup({
     select = false,
   },
   window = {
-    completion = cmp.config.window.bordered(),
-    documentation = cmp.config.window.bordered(),
+    completion = cmp.config.window.bordered(winhighlight),
+    documentation = cmp.config.window.bordered(winhighlight),
   },
   experimental = {
     ghost_text = true,
@@ -90,6 +99,7 @@ cmp.setup({
   },
   preselect = cmp.PreselectMode.None,
 })
+
 
 -- SECTION: autopairs
 require("nvim-autopairs").setup()
