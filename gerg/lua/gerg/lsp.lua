@@ -170,7 +170,6 @@ vim.diagnostic.config({
  })
 
 -- Nix (nil) config
-
 lspconfig.nil_ls.setup({
   capabilities = capabilities,
   on_attach = default_on_attach,

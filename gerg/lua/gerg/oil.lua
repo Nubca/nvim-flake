@@ -1,18 +1,11 @@
--- local function is_always_hidden(name)
---   if name == ".git" then return true end
---
---   return false
--- end
-
 require("oil").setup({
   columns = {
     "icon",
-    -- "permissions",
-    -- "size",
-    -- "mtime",
+    "permissions",
+    "size",
+    "mtime",
   },
   view_options = {
-    -- is_always_hidden = is_always_hidden,
     show_hidden = true,
     natural_order = true,
     case_insensitive = true,
@@ -34,5 +27,5 @@ require("oil").setup({
   },
 })
 WK.add({
-  { "<leader>tt", "<CMD>Oil --float<CR>", desc = "Open containing directory" },
+  { "<leader>t", "<CMD>Oil --float<CR>", desc = "Open containing directory" },
 })
