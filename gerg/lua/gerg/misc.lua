@@ -54,6 +54,14 @@ vim.keymap.set('n', '<leader><v>', vim.cmd.UndotreeToggle)
 -- stop hiding double quotes in json files
 vim.g.indentLine_setConceal = 0
 
+vim.api.nvim_create_autocmd("ColorScheme", {
+  pattern = "*",
+  callback = function()
+    vim.api.nvim_set_hl(0, "CursorLine", { bg = "#111111" })
+    vim.api.nvim_set_hl(0, "cursorColumn", { bg = "#111111" })
+  end
+})
+
 -- SECTION: theme
 vim.g.moonflyCursorColor = true
 vim.g.moonflyNormalFloat = true
@@ -66,13 +74,6 @@ vim.cmd.colorscheme("moonfly")
 
 vim.g.cursorline_timeout = 0
 
-vim.api.nvim_create_autocmd("ColorScheme", {
-  pattern = "*",
-  callback = function()
-    vim.api.nvim_set_hl(0, "CursorLine", { bg = "#111111" })
-    vim.api.nvim_set_hl(0, "cursorcolumn", { bg = "#111111" })
-  end
-})
 
 -- Show spaces when Highlighted
 vim.opt.listchars = {
