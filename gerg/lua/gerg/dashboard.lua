@@ -8,7 +8,6 @@
         {
           icon = ' Find',
           icon_hl = '@variable',
-          desc = 'Files',
           group = 'Label',
           action = 'Telescope find_files',
           key = 'f',
@@ -20,14 +19,16 @@
           key = 'a',
         },
         {
-          desc = ' .files',
+          desc = ' dotfiles',
           group = 'Number',
           action = 'Telescope dotfiles',
           key = 'd',
         },
       },
-      project = { enable = true, limit = 5, icon = '', label = 'Recent Projects', action = 'Telescope find_files cwd='},
-      mru = { limit = 10, icon = '', label = 'Recent Files', cwd_only = false },
-      footer = {"We do this NOT because it is easy, but because we thought it would be easy."},
+      packages = { enable = false },
+      project = { enable = true, limit = 5, icon = ' ', label = 'Recent Projects', action = 'Telescope find_files cwd='},
+      mru = { limit = 10, icon = ' ', label = 'Recent Files', cwd_only = false },
+      footer = {"\nWe do this NOT because it is easy,\nbut because we thought it would be easy."
+      },
     },
   }
