@@ -41,8 +41,8 @@ require("nvim-treesitter.configs").setup({
 --   query = {
 --     [""] = "rainbow-delimiters",
 --     lua = "rainbow-blocks",
-  -- },
-
+--   },
+--
 -- rainbows
 
 local highlight = {

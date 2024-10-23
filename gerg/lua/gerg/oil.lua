@@ -34,5 +34,5 @@ require("oil").setup({
   },
 })
 WK.add({
-  { "<leader>o", "<CMD>Oil --float<CR>", desc = "Open containing directory" },
+  { "<leader>tt", "<CMD>Oil --float<CR>", desc = "Open containing directory" },
 })
