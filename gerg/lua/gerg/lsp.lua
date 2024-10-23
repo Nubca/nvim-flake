@@ -142,7 +142,7 @@ local completion = null_ls.builtins.completion
 
 local ls_sources = {
   formatting.stylua,
-  -- formatting.nixfmt,
+  formatting.nixfmt,
   -- code_actions.gitsigns,
   completion.luasnip,
   diagnostics.statix,
@@ -167,26 +167,48 @@ require("lsp_lines").setup()
 vim.diagnostic.config({
   virtual_text = false,
   virtual_lines = true,
- })
+})
 
 -- Nix (nil) config
-lspconfig.nil_ls.setup({
-  capabilities = capabilities,
-  on_attach = default_on_attach,
-  cmd = { "nil" },
+-- lspconfig.nil_ls.setup({
+--   capabilities = capabilities,
+--   on_attach = default_on_attach,
+--   cmd = { "nil" },
+--   settings = {
+--     ["nil"] = {
+--       nix = {
+--         binary = "nix",
+--         maxMemoryMB = nil,
+--         flake = {
+--           autoEvalInputs = false,
+--           autoArchive = false,
+--           nixpkgsInputName = nil,
+--         },
+--       },
+--       formatting = {
+--         command = { "nixfmt", "--quiet" },
+--       },
+--     },
+--   },
+-- })
+
+lspconfig.nixd.setup({
+  cmd = { "nixd" },
   settings = {
-    ["nil"] = {
-      nix = {
-        binary = "nix",
-        maxMemoryMB = nil,
-        flake = {
-          autoEvalInputs = false,
-          autoArchive = false,
-          nixpkgsInputName = nil,
-        },
+    nixd = {
+      nixpkgs = {
+        expr = "import <nixpkgs> { }",
       },
       formatting = {
-        command = { "nixfmt", "--quiet" },
+        command = { "nixfmt" },
+      },
+      options = {
+        nixos = {
+          expr = '(builtins.getFlake "/home/ca/.nixos").nixosConfigurations.mpNix.options',
+        },
+        home_manager = {
+          expr = '(builtins.getFlake "/home/ca/.nixos").homeConfigurations.mpNix.options',
+        },
       },
     },
   },
@@ -215,7 +237,7 @@ lspconfig.lua_ls.setup({
             callSnippet = "Replace",
           },
           diagnostics = {
-            globals = {"vim"},
+            globals = { "vim" },
           },
         },
       })
