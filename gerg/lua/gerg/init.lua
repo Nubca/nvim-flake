@@ -1,6 +1,7 @@
 require("gerg.misc")
 require("gerg.lsp")
 require("gerg.completion")
+require("gerg.dashboard")
 require("gerg.treesitter")
 require("gerg.lualine")
 require("gerg.noice")

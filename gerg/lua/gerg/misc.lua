@@ -62,14 +62,6 @@ vim.api.nvim_create_autocmd("ColorScheme", {
   end
 })
 
-vim.api.nvim_create_autocmd("VimEnter", {
-  callback = function()
-    if vim.fn.argc() == 0 and vim.fn.line2byte('$') == -1 then
-      vim.cmd('intro')
-    end
-  end
-})
-
 -- SECTION: theme
 vim.g.moonflyCursorColor = true
 vim.g.moonflyNormalFloat = true
@@ -81,7 +73,6 @@ vim.g.moonflyVirtualTextColor = true
 vim.cmd.colorscheme("moonfly")
 
 vim.g.cursorline_timeout = 0
-
 
 -- Show spaces when Highlighted
 vim.opt.listchars = {
