@@ -120,6 +120,18 @@
       "url": "https://github.com/ibhagwan/fzf-lua/archive/fc0f2b5781587d388b743c2c114127a7036d1a31.tar.gz",
       "hash": "08k9xmnkjian4mr5ak7fzbw5v14rlhr6zl6a9nk4xq155p5qlk2s"
     },
+    "gitsigns.nvim": {
+      "type": "Git",
+      "repository": {
+        "type": "GitHub",
+        "owner": "lewis6991",
+        "repo": "gitsigns.nvim"
+      },
+      "branch": "main",
+      "revision": "ee7634ab4f0a6606438fe13e16cbf2065589a5ed",
+      "url": "https://github.com/lewis6991/gitsigns.nvim/archive/ee7634ab4f0a6606438fe13e16cbf2065589a5ed.tar.gz",
+      "hash": "134xgywyjcg731iya93w14p48dq4cp21q36fb4jf7c4vgnnzy7ld"
+    },
     "indent-blankline.nvim": {
       "type": "Git",
       "repository": {
