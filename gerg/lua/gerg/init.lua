@@ -1,4 +1,4 @@
--- vim.cmd.colorscheme("kanagawa")
+vim.cmd.colorscheme("kanagawa")
 require("gerg.misc")
 require("gerg.lsp")
 require("gerg.completion")

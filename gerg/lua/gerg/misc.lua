@@ -64,7 +64,7 @@ vim.cmd("colorscheme kanagawa")
 -- vim.g.moonflyUnderlineMatchParen = true
 -- vim.g.moonflyVirtualTextColor = true
 -- vim.cmd.colorscheme("moonfly")
-
+--
 vim.g.cursorline_timeout = 0
 
 -- Show spaces when Highlighted
