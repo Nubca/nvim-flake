@@ -6,20 +6,23 @@ require('dashboard').setup {
     },
     shortcut = {
       {
-        icon = ' Find',
+        icon = ' ',
+        desc = 'Find',
         icon_hl = '@variable',
         group = 'Label',
         action = 'Telescope find_files',
         key = 'f',
       },
       {
-        desc = ' Apps',
+        icon = ' ',
+        desc = 'Apps',
         group = 'DiagnosticHint',
         action = 'Telescope app',
         key = 'a',
       },
       {
-        desc = ' dotfiles',
+        icon = ' ',
+        desc = 'Dotfiles',
         group = 'Number',
         action = 'Telescope dotfiles',
         key = 'd',
