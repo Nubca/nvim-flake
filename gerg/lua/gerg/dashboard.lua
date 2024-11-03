@@ -33,7 +33,7 @@ require('dashboard').setup {
     mru = { limit = 10, icon = ' ', label = 'Recent Files', cwd_only = false },
     footer = {
       '',
-      'We do this NOT because it is easy,',
+      'We do this not because it is easy,',
       'but because we thought it would be easy.'},
   },
 }
