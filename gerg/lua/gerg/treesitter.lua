@@ -5,12 +5,15 @@ require("nvim-treesitter.configs").setup({
   ignore_install = {},
   ensure_installed = {},
   auto_install = false,
-  -- highlight = {
-  --   enable = true,
-  --   additional_vim_regex_highlighting = false,
-  -- },
+  highlight = {
+    enable = true,
+    additional_vim_regex_highlighting = false,
+  },
+  indent = { enable = true },
 })
 
+-- Removed indent-blankline.nvim
+-- 
 -- -- rainbows
 -- local highlight = {
 --   "RainbowDelimiterRed",

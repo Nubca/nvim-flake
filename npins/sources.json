@@ -140,21 +140,9 @@
         "repo": "gitsigns.nvim"
       },
       "branch": "main",
-      "revision": "7c27a30450130cd59c4994a6755e3c5d74d83e76",
-      "url": "https://github.com/lewis6991/gitsigns.nvim/archive/7c27a30450130cd59c4994a6755e3c5d74d83e76.tar.gz",
-      "hash": "0rwydfc5mz8cy4bqjlv8x69gwpngkcs3pdzmj5rdqicdglnq10k7"
-    },
-    "indent-blankline.nvim": {
-      "type": "Git",
-      "repository": {
-        "type": "GitHub",
-        "owner": "lukas-reineke",
-        "repo": "indent-blankline.nvim"
-      },
-      "branch": "master",
-      "revision": "04e44b09ee3ff189c69ab082edac1ef7ae2e256c",
-      "url": "https://github.com/lukas-reineke/indent-blankline.nvim/archive/04e44b09ee3ff189c69ab082edac1ef7ae2e256c.tar.gz",
-      "hash": "08vf6k69p6gnciawabgy11sd5vy94i8087jxwch07plr9kfginx1"
+      "revision": "4daf7022f1481edf1e8fb9947df13bb07c18e89a",
+      "url": "https://github.com/lewis6991/gitsigns.nvim/archive/4daf7022f1481edf1e8fb9947df13bb07c18e89a.tar.gz",
+      "hash": "0l3jmqcx17q76bhbww8dwhzif9jcsnk53xwqagdzkb4m6xzywz0l"
     },
     "lazydev.nvim": {
       "type": "Git",
