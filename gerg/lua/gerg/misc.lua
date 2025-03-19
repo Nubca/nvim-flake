@@ -62,15 +62,37 @@ vim.api.nvim_create_autocmd("ColorScheme", {
   end
 })
 
--- SECTION: theme
-vim.g.moonflyCursorColor = true
-vim.g.moonflyNormalFloat = true
-vim.g.moonflyTerminalColors = true
-vim.g.moonflyTransparent = true
-vim.g.moonflyUndercurls = true
-vim.g.moonflyUnderlineMatchParen = true
-vim.g.moonflyVirtualTextColor = true
-vim.cmd.colorscheme("moonfly")
+if not vim.g.vscode then
+  -- SECTION: theme
+  vim.g.moonflyCursorColor = true
+  vim.g.moonflyNormalFloat = true
+  vim.g.moonflyTerminalColors = true
+  vim.g.moonflyTransparent = true
+  vim.g.moonflyUndercurls = true
+  vim.g.moonflyUnderlineMatchParen = true
+  vim.g.moonflyVirtualTextColor = true
+  vim.cmd.colorscheme("moonfly")
+
+  -- SECTION: colorizer
+  require("colorizer").setup()
+  vim.keymap.set("n", "<leader>ct", "<cmd> ColorizerToggle<CR>")
+
+  require("toggleterm").setup({
+    open_mapping = [[<Leader>e]],
+    direction = "float",
+    autochdir = true,
+    insert_mappings = false,
+    terminal_mappings = true,
+    close_on_exit = true,
+    size = function(term)
+      if term.direction == "horizontal" then
+        return 15
+      elseif term.direction == "vertical" then
+        return vim.o.columns * 0.4
+      end
+    end,
+  })
+end
 
 vim.g.cursorline_timeout = 0
 
@@ -92,10 +114,6 @@ vim.api.nvim_create_autocmd({"ModeChanged"}, {
     vim.opt.list = false
   end
 })
-
--- SECTION: colorizer
-require("colorizer").setup()
-vim.keymap.set("n", "<leader>ct", "<cmd> ColorizerToggle<CR>")
 
 -- SECTION: whichkey
 WK = require("which-key")
@@ -121,20 +139,4 @@ WK.add({
     mode = { "x" },
     { "<leader>p", '"_dP' },
   },
-})
-
-require("toggleterm").setup({
-  open_mapping = [[<Leader>e]],
-  direction = "float",
-  autochdir = true,
-  insert_mappings = false,
-  terminal_mappings = true,
-  close_on_exit = true,
-  size = function(term)
-    if term.direction == "horizontal" then
-      return 15
-    elseif term.direction == "vertical" then
-      return vim.o.columns * 0.4
-    end
-  end,
 })
