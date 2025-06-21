@@ -22,57 +22,36 @@
       owner = "gerg-l";
       repo = "mnw";
     };
+    systems = {
+      type = "github";
+      owner = "nix-systems";
+      repo = "default";
+    };
   };
 
   outputs =
     {
       self,
       nixpkgs,
-      neovim-nightly,
       mnw,
+      systems,
       ...
-    }:
+    }@inputs:
     let
-      inherit (nixpkgs) lib;
-      #
-      # Funni helper function
-      #
-      gerg-utils =
-        x:
-        lib.foldAttrs lib.mergeAttrs { } (
-          map
-            (
-              s:
-              builtins.mapAttrs (
-                _: v:
-                if lib.isFunction v then
-                  {
-                    ${s} = v {
-                      pkgs = nixpkgs.legacyPackages.${s};
-                      system = s;
-                    };
-                  }
-                else
-                  v
-              ) x
-            )
-            [
-              "x86_64-linux"
-              "x86_64-darwin"
-              "aarch64-linux"
-              "aarch64-darwin"
-            ]
-        );
+      eachSystem = nixpkgs.lib.genAttrs (import systems);
     in
-    gerg-utils {
+    {
       #
       # Linter and formatter, run with "nix fmt"
       # You can use alejandra or nixpkgs-fmt instead of nixfmt if you wish
       #
-      formatter =
-        { pkgs, ... }:
+      formatter = eachSystem (
+        system:
+        let
+          pkgs = nixpkgs.legacyPackages.${system};
+        in
         pkgs.writeShellApplication {
-          name = "lint";
+          name = "format";
           runtimeInputs = builtins.attrValues {
             inherit (pkgs)
               nixfmt-rfc-style
@@ -83,102 +62,41 @@
               ;
           };
           text = ''
-            fd '.*\.nix' . -x statix fix -- {} \;
-            fd '.*\.nix' . -X deadnix -e -- {} \; -X nixfmt {} \;
-            fd '.*\.lua' . -X stylua --indent-type Spaces --indent-width 2 {} \;
+            fd "$@" -t f -e nix -x statix fix -- '{}'
+            fd "$@" -t f -e nix -X deadnix -e -- '{}' \; -X nixfmt '{}'
+            fd "$@" -t f -e lua -X stylua --indent-type Spaces --indent-width 2 '{}'
           '';
-        };
+        }
+      );
 
-      devShells =
-        { pkgs, system }:
+      devShells = eachSystem (
+        system:
+        let
+          pkgs = nixpkgs.legacyPackages.${system};
+        in
         {
-          default = pkgs.mkShell {
+          default = pkgs.mkShellNoCC {
             packages = [
               self.packages.${system}.default.devMode
               self.formatter.${system}
               pkgs.npins
             ];
           };
-        };
+        }
+      );
 
-      packages =
-        { pkgs, system }:
+      packages = eachSystem (
+        system:
+        let
+          pkgs = nixpkgs.legacyPackages.${system};
+        in
         {
           default = self.packages.${system}.neovim;
 
-          neovim = mnw.lib.wrap pkgs {
-            inherit (neovim-nightly.packages.${system}) neovim;
+          blink-cmp = pkgs.callPackage ./packages/blink-cmp/package.nix { };
 
-            wrapperArgs = [
-              "--set"
-              "FZF_DEFAULT_OPTS"
-              "--layout=reverse --inline-info"
-            ];
-
-            appName = "gerg";
-
-            extraLuaPackages = p: [ p.jsregexp ];
-
-            withNodeJs = true;
-            withPerl = true;
-
-            # Source lua config
-            initLua = ''
-              require('gerg')
-            '';
-
-            # Add lua config
-            devExcludedPlugins = [
-              ./gerg
-            ];
-            # Impure path to lua config for devShell
-            devPluginPaths = [
-              "/home/ca/Sources/nvim-flake/gerg"
-            ];
-
-            desktopEntry = false;
-
-            plugins =
-              [
-                # Add plugins from nixpkgs here
-                #
-                pkgs.vimPlugins.nvim-treesitter.withAllGrammars
-              ]
-              ++ lib.mapAttrsToList (
-                #
-                # This generates plugins from npins sources
-                #
-                pname: pin:
-                (
-                  pin
-                  // {
-                    inherit pname;
-                    version = builtins.substring 0 8 pin.revision;
-                  }
-                )
-              ) (pkgs.callPackages ./npins/sources.nix { });
-
-            extraBinPath = builtins.attrValues {
-
-              #
-              # Runtime dependencies
-              #
-              inherit (pkgs)
-                deadnix
-                statix
-                nil
-
-                lua-language-server
-                stylua
-
-                #rustfmt
-
-                ripgrep
-                fd
-                chafa
-                ;
-            };
-          };
-        };
+          neovim = mnw.lib.wrap { inherit pkgs inputs; } ./config.nix;
+        }
+      );
     };
 }
