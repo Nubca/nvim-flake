@@ -37,7 +37,7 @@
           root = ./.;
           fileset = fs.unions [ ./lua ];
         };
-      impure = "~/Projects/nvim-flake/gerg";
+      impure = "~/Sources/nvim-flake/lua";
     };
 
     start = inputs.mnw.lib.npinsToPlugins pkgs ./start.json;
