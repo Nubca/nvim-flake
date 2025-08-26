@@ -14,6 +14,9 @@ vim.opt.smartindent = true
 
 vim.opt.cmdheight = 1
 vim.opt.updatetime = 50
+vim.opt.tm = 1000
+vim.opt.hidden = true
+vim.opt.undofile = true
 vim.opt.splitbelow = true
 vim.opt.splitright = true
 vim.opt.signcolumn = "yes:2"
@@ -29,7 +32,11 @@ vim.opt.relativenumber = true
 
 vim.opt.clipboard = "unnamedplus"
 
-vim.opt.wrap = false
+vim.opt.cursorline = true
+vim.opt.cursorcolumn = true
+vim.opt.colorcolumn = "100"
+vim.opt.showbreak = "↪ "
+vim.opt.wrap = true
 
 vim.opt.hlsearch = false
 vim.opt.incsearch = true
@@ -50,21 +57,49 @@ WK.setup()
 WK.add({ " ", "<Nop>", { silent = true, remap = false } })
 vim.g.mapleader = " "
 
+-- Remap for dealing with word wrap
+vim.keymap.set('n', 'k', "v:count == 0 ? 'gk' : 'k'", { expr = true, silent = true })
+vim.keymap.set('n', 'j', "v:count == 0 ? 'gj' : 'j'", { expr = true, silent = true })
+vim.keymap.set('n', 'gj', 'j')
+vim.keymap.set('n', 'gk', 'k')
+
 --theming
 vim.opt.termguicolors = true
 
-vim.g.moonflyCursorColor = true
-vim.g.moonflyNormalFloat = true
-vim.g.moonflyTerminalColors = true
-vim.g.moonflyTransparent = true
-vim.g.moonflyUndercurls = false
-vim.g.moonflyUnderlineMatchParen = true
-vim.g.moonflyVirtualTextColor = true
-vim.cmd.colorscheme("moonfly")
+if not vim.g.vscode then
+  vim.g.moonflyCursorColor = true
+  vim.g.moonflyNormalFloat = true
+  vim.g.moonflyTerminalColors = true
+  vim.g.moonflyTransparent = true
+  vim.g.moonflyUndercurls = false
+  vim.g.moonflyUnderlineMatchParen = true
+  vim.g.moonflyVirtualTextColor = true
+  vim.cmd.colorscheme("moonfly")
+end
 
 -- stop hiding double quotes in json files
 vim.g.indentLine_setConceal = 0
 
+vim.g.cursorline_timeout = 0
+
+-- Show spaces when Highlighted
+vim.opt.listchars = {
+  space = '·',
+  trail = '·',
+  tab = '>·'
+}
+vim.api.nvim_create_autocmd({"ModeChanged"}, {
+  pattern = {"*:v", "*:V", "*:\x16"},
+  callback = function()
+    vim.opt.list = true
+  end
+})
+vim.api.nvim_create_autocmd({"ModeChanged"}, {
+  pattern = {"v:n", "V:n", "\x16:n"},
+  callback = function()
+    vim.opt.list = false
+  end
+})
 WK.add({
   { "Q", "<Nop>", { noremap = false } },
 })
