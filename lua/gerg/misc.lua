@@ -14,6 +14,7 @@ vim.opt.smartindent = true
 
 vim.opt.cmdheight = 1
 vim.opt.updatetime = 50
+vim.opt.timeout = false
 vim.opt.tm = 1000
 vim.opt.hidden = true
 vim.opt.undofile = true
@@ -33,8 +34,10 @@ vim.opt.relativenumber = true
 vim.opt.clipboard = "unnamedplus"
 
 vim.opt.cursorline = true
+vim.opt.cursorlineopt = "both"
 vim.opt.cursorcolumn = true
 vim.opt.colorcolumn = "100"
+vim.opt.shiftround = true
 vim.opt.showbreak = "↪ "
 vim.opt.wrap = true
 
@@ -42,10 +45,12 @@ vim.opt.hlsearch = false
 vim.opt.incsearch = true
 
 vim.opt.spell = true
+vim.opt.ignorecase = true
+vim.opt.smartcase = true
 vim.opt.spelllang = "en_us"
 
 vim.opt.scrolloff = 10
-vim.opt.guicursor = "i:block"
+vim.opt.guicursor = "n-v-c:block,i-ci-ve:ver25,r-cr-o:hor20"
 vim.g.cursorline_timeout = 0
 
 vim.opt.shortmess:append({ I = true, c = true })
@@ -65,6 +70,14 @@ vim.keymap.set('n', 'gk', 'k')
 
 --theming
 vim.opt.termguicolors = true
+
+vim.api.nvim_create_autocmd("ColorScheme", {
+  pattern = "*",
+  callback = function()
+    vim.api.nvim_set_hl(0, "CursorLine", { bg = "#111111" })
+    vim.api.nvim_set_hl(0, "CursorColumn", { bg = "#111111" })
+  end
+})
 
 if not vim.g.vscode then
   vim.g.moonflyCursorColor = true
