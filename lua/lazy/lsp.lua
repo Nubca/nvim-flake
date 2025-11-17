@@ -44,7 +44,7 @@ return {
         sources = ls_sources,
       })
       -- Enable lspconfig
-      local lspconfig = require("lspconfig")
+      local lspconfig = vim.lsp.config -- require("lspconfig")
       local capabilities = require("blink.cmp").get_lsp_capabilities()
 
       vim.diagnostic.config({
