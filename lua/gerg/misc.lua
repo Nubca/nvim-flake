@@ -12,6 +12,16 @@ vim.opt.softtabstop = 2
 vim.opt.expandtab = true
 vim.opt.smartindent = true
 
+-- folding with lsp/treesitter
+vim.o.foldmethod = 'expr'
+vim.o.foldexpr = 'v:lua.vim.treesitter.foldexpr()'
+
+-- These are the key settings you're missing:
+vim.o.foldlevel = 99      -- Start with all folds open
+vim.o.foldlevelstart = 99 -- Always start with all folds open
+vim.o.foldenable = true   -- Enable folding
+vim.o.foldcolumn = "auto"
+
 vim.opt.cmdheight = 1
 vim.opt.updatetime = 50
 vim.opt.timeout = false
