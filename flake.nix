@@ -27,6 +27,12 @@
       owner = "nix-systems";
       repo = "default";
     };
+    npins = {
+      type = "github";
+      owner = "andir";
+      repo = "npins";
+      flake = false;
+    };
   };
 
   outputs =
@@ -35,6 +41,7 @@
       nixpkgs,
       mnw,
       systems,
+      npins,
       ...
     }@inputs:
     let
@@ -79,7 +86,12 @@
             packages = [
               self.packages.${system}.default.devMode
               self.formatter.${system}
-              pkgs.npins
+              (pkgs.writeShellScriptBin "opt" ''
+                npins --lock-file opt.json "$@"
+              '')
+              (pkgs.writeShellScriptBin "start" ''
+                npins --lock-file start.json "$@"
+              '')
             ];
           };
         }
@@ -96,6 +108,8 @@
           blink-cmp = pkgs.callPackage ./packages/blink-cmp/package.nix { };
 
           neovim = mnw.lib.wrap { inherit pkgs inputs; } ./config.nix;
+
+          npins = pkgs.callPackage (npins + /npins.nix) { };
         }
       );
     };

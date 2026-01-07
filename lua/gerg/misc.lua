@@ -1,4 +1,4 @@
---vim herasy
+--vim heresy
 vim.opt.encoding = "utf-8"
 vim.opt.mouse = "a"
 vim.cmd.aunmenu({ "PopUp.How-to\\ disable\\ mouse" })
@@ -80,6 +80,7 @@ vim.keymap.set('n', 'gk', 'k')
 
 --theming
 vim.opt.termguicolors = true
+vim.opt.winborder = "single"
 
 vim.api.nvim_create_autocmd("ColorScheme", {
   pattern = "*",
@@ -106,11 +107,12 @@ vim.g.indentLine_setConceal = 0
 vim.g.cursorline_timeout = 0
 
 -- Show spaces when Highlighted
-vim.opt.listchars = {
-  space = '·',
-  trail = '·',
-  tab = '>·'
-}
+vim.opt.listchars = "space:·,tab:» ,trail:·,extends:→,precedes:←,nbsp:␣"
+-- vim.opt.listchars = {
+--   space = '·',
+--   trail = '·',
+--   tab = '>·'
+-- }
 vim.api.nvim_create_autocmd({"ModeChanged"}, {
   pattern = {"*:v", "*:V", "*:\x16"},
   callback = function()
