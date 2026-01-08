@@ -13,6 +13,61 @@
       "url": "https://github.com/nvim-neorocks/lz.n/archive/b36c73e1a9d1cb2c05b354b390da0d141c9fa09d.tar.gz",
       "hash": "sha256-Z8r0fOmXnj38g+FCvJnS/pG7PRcvKT0MZ8YPeNytc80="
     },
+    "nvim-treesitter": {
+      "type": "Git",
+      "repository": {
+        "type": "GitHub",
+        "owner": "nvim-treesitter",
+        "repo": "nvim-treesitter"
+      },
+      "branch": "master",
+      "submodules": false,
+      "revision": "42fc28ba918343ebfd5565147a42a26580579482",
+      "url": "https://github.com/nvim-treesitter/nvim-treesitter/archive/42fc28ba918343ebfd5565147a42a26580579482.tar.gz",
+      "hash": "sha256-CVs9FTdg3oKtRjz2YqwkMr0W5qYLGfVyxyhE3qnGYbI="
+    },
+    "nvim-treesitter-context": {
+      "type": "GitRelease",
+      "repository": {
+        "type": "GitHub",
+        "owner": "nvim-treesitter",
+        "repo": "nvim-treesitter-context"
+      },
+      "pre_releases": false,
+      "version_upper_bound": null,
+      "release_prefix": null,
+      "submodules": false,
+      "version": "v1.0.0",
+      "revision": "ed1cf48d5af252248c55f50b9427e8ce883a2c6b",
+      "url": "https://api.github.com/repos/nvim-treesitter/nvim-treesitter-context/tarball/refs/tags/v1.0.0",
+      "hash": "sha256-f+0DMYzLlciwpEsq91htyZuk/6orvygeu7laBNEXX/g="
+    },
+    "nvim-treesitter-textobjects": {
+      "type": "Git",
+      "repository": {
+        "type": "GitHub",
+        "owner": "nvim-treesitter",
+        "repo": "nvim-treesitter-textobjects"
+      },
+      "branch": "main",
+      "submodules": false,
+      "revision": "baa6b4ec28c8be5e4a96f9b1b6ae9db85ec422f8",
+      "url": "https://github.com/nvim-treesitter/nvim-treesitter-textobjects/archive/baa6b4ec28c8be5e4a96f9b1b6ae9db85ec422f8.tar.gz",
+      "hash": "sha256-kbnZaUtIKXoBj4tFiQWSpGmI6Doke7PjoetqIhsI8lc="
+    },
+    "nvim-ts-context-commentstring": {
+      "type": "Git",
+      "repository": {
+        "type": "GitHub",
+        "owner": "joosepalviste",
+        "repo": "nvim-ts-context-commentstring"
+      },
+      "branch": "main",
+      "submodules": false,
+      "revision": "1b212c2eee76d787bbea6aa5e92a2b534e7b4f8f",
+      "url": "https://github.com/joosepalviste/nvim-ts-context-commentstring/archive/1b212c2eee76d787bbea6aa5e92a2b534e7b4f8f.tar.gz",
+      "hash": "sha256-AjDM3+n4+lNBQi8P2Yrh0Ab06uYCndBQT9TX36rDbOM="
+    },
     "plenary.nvim": {
       "type": "Git",
       "repository": {
@@ -35,9 +90,9 @@
       },
       "branch": "master",
       "submodules": false,
-      "revision": "1ad5a8d40176a8749f0c77b8875225d9d299a438",
-      "url": "https://github.com/bluz71/vim-moonfly-colors/archive/1ad5a8d40176a8749f0c77b8875225d9d299a438.tar.gz",
-      "hash": "sha256-izM1EFBfnAoDWho8Zfsu8i2bUkWvV6oQzGz/9NFVgnA="
+      "revision": "5b322b91fe0792d48ef7156af38739ae42fda7d1",
+      "url": "https://github.com/bluz71/vim-moonfly-colors/archive/5b322b91fe0792d48ef7156af38739ae42fda7d1.tar.gz",
+      "hash": "sha256-PpgXBOtYg7W8LHti5tqDdISW3ylvrwu4c+gTpgB2ic8="
     },
     "which-key.nvim": {
       "type": "Git",

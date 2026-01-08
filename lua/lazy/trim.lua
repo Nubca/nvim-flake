@@ -14,5 +14,5 @@ return {
       highlight = true,
     })
   end,
-  keys = { { "<leader>t", "<CMD>Trim<CR>", desc = "Trim" } },
+  keys = { { "<leader>w", "<CMD>Trim<CR>", desc = "Trim" } },
 }

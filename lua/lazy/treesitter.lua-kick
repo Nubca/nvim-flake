@@ -1,20 +1,20 @@
 return {
   {
     "nvim-treesitter",
-    dependencies = {
-      "nvim-treesitter-textobjects",
-      "nvim-treesitter-context",
-      "nvim-ts-context-commentstring",
-    },
+    lazy = false,
     after = function()
+      if vim.g.did_load_treesitter_plugin then
+        return
+      end
+      vim.g.did_load_treesitter_plugin = true
+
       local configs = require('nvim-treesitter.configs')
-      -- vim.g.skip_ts_context_comment_string_module = true
+      vim.g.skip_ts_context_comment_string_module = true
 
       ---@diagnostic disable-next-line: missing-fields
       configs.setup {
         highlight = {
           enable = true,
-          auto_install = false,
           disable = function(_, buf)
             local max_filesize = 100 * 1024 -- 100 KiB
             local ok, stats = pcall(vim.loop.fs_stat, vim.api.nvim_buf_get_name(buf))
@@ -92,9 +92,7 @@ return {
         max_lines = 3,
       }
 
-      require('ts_context_commentstring').setup {
-        enable_autocmd = false,
-      }
+      require('ts_context_commentstring').setup()
     end,
   },
   {
@@ -134,7 +132,7 @@ return {
           highlight = vim.g.rainbow_delimiters.highlight,
         },
         indent = {
-          char = "┋",
+          char = "│",
         },
       })
     end,

@@ -26,13 +26,16 @@ vim.opt.cmdheight = 1
 vim.opt.updatetime = 50
 vim.opt.timeout = false
 vim.opt.tm = 1000
+
 vim.opt.hidden = true
 vim.opt.undofile = true
 vim.opt.splitbelow = true
 vim.opt.splitright = true
+
 vim.opt.signcolumn = "yes:2"
 vim.opt.ai = true
 vim.opt.swapfile = false
+
 vim.opt.backup = false
 vim.opt.writebackup = false
 vim.opt.visualbell = false
@@ -47,6 +50,7 @@ vim.opt.cursorline = true
 vim.opt.cursorlineopt = "both"
 vim.opt.cursorcolumn = true
 vim.opt.colorcolumn = "100"
+
 vim.opt.shiftround = true
 vim.opt.showbreak = "↪ "
 vim.opt.wrap = true
@@ -108,11 +112,7 @@ vim.g.cursorline_timeout = 0
 
 -- Show spaces when Highlighted
 vim.opt.listchars = "space:·,tab:» ,trail:·,extends:→,precedes:←,nbsp:␣"
--- vim.opt.listchars = {
---   space = '·',
---   trail = '·',
---   tab = '>·'
--- }
+
 vim.api.nvim_create_autocmd({"ModeChanged"}, {
   pattern = {"*:v", "*:V", "*:\x16"},
   callback = function()
@@ -125,6 +125,7 @@ vim.api.nvim_create_autocmd({"ModeChanged"}, {
     vim.opt.list = false
   end
 })
+
 WK.add({
   { "Q", "<Nop>", { noremap = false } },
 })

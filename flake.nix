@@ -48,10 +48,6 @@
       eachSystem = nixpkgs.lib.genAttrs (import systems);
     in
     {
-      #
-      # Linter and formatter, run with "nix fmt"
-      # You can use alejandra or nixpkgs-fmt instead of nixfmt if you wish
-      #
       formatter = eachSystem (
         system:
         let
@@ -61,7 +57,7 @@
           name = "format";
           runtimeInputs = builtins.attrValues {
             inherit (pkgs)
-              nixfmt-rfc-style
+              nixfmt
               deadnix
               statix
               fd

@@ -44,12 +44,17 @@ in
             ./after
           ];
         };
-      impure = "~/Projects/nvim-flake";
+      impure = "~/Sources/nvim-flake";
     };
 
     startAttrs = npinsToPlugins ./start.json;
 
-    start = pkgs.vimPlugins.nvim-treesitter.withAllGrammars.dependencies;
+    start = [
+      pkgs.vimPlugins.nvim-treesitter.withAllGrammars
+      pkgs.vimPlugins.nvim-treesitter-textobjects
+      pkgs.vimPlugins.nvim-treesitter-context
+      pkgs.vimPlugins.nvim-ts-context-commentstring
+    ];
 
     optAttrs = {
       "blink.cmp" = inputs.self.packages.${pkgs.stdenv.system}.blink-cmp;
