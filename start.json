@@ -9,9 +9,9 @@
       },
       "branch": "master",
       "submodules": false,
-      "revision": "b36c73e1a9d1cb2c05b354b390da0d141c9fa09d",
-      "url": "https://github.com/nvim-neorocks/lz.n/archive/b36c73e1a9d1cb2c05b354b390da0d141c9fa09d.tar.gz",
-      "hash": "sha256-Z8r0fOmXnj38g+FCvJnS/pG7PRcvKT0MZ8YPeNytc80="
+      "revision": "5d362d1fa6aaf251a91e3fad95d2bcd094dfbac0",
+      "url": "https://github.com/nvim-neorocks/lz.n/archive/5d362d1fa6aaf251a91e3fad95d2bcd094dfbac0.tar.gz",
+      "hash": "sha256-0YiMUUIhCJCkVFjZYvfq80A/WUTL8E1Fa3qOsdYER2k="
     },
     "nvim-treesitter": {
       "type": "Git",
@@ -51,9 +51,9 @@
       },
       "branch": "main",
       "submodules": false,
-      "revision": "baa6b4ec28c8be5e4a96f9b1b6ae9db85ec422f8",
-      "url": "https://github.com/nvim-treesitter/nvim-treesitter-textobjects/archive/baa6b4ec28c8be5e4a96f9b1b6ae9db85ec422f8.tar.gz",
-      "hash": "sha256-kbnZaUtIKXoBj4tFiQWSpGmI6Doke7PjoetqIhsI8lc="
+      "revision": "4d55f63252e04c5212daed958e4e940915ff16ce",
+      "url": "https://github.com/nvim-treesitter/nvim-treesitter-textobjects/archive/4d55f63252e04c5212daed958e4e940915ff16ce.tar.gz",
+      "hash": "sha256-uLugBNNJUqu4zEtPB2fy+abEOORnsmrznGy8VIvC9bQ="
     },
     "nvim-ts-context-commentstring": {
       "type": "Git",
@@ -90,9 +90,9 @@
       },
       "branch": "master",
       "submodules": false,
-      "revision": "5b322b91fe0792d48ef7156af38739ae42fda7d1",
-      "url": "https://github.com/bluz71/vim-moonfly-colors/archive/5b322b91fe0792d48ef7156af38739ae42fda7d1.tar.gz",
-      "hash": "sha256-PpgXBOtYg7W8LHti5tqDdISW3ylvrwu4c+gTpgB2ic8="
+      "revision": "d11b3d04cc1cb71a778d67a4df73283a5a6d66f4",
+      "url": "https://github.com/bluz71/vim-moonfly-colors/archive/d11b3d04cc1cb71a778d67a4df73283a5a6d66f4.tar.gz",
+      "hash": "sha256-+zUmQWRUNzdUDZBV7xmrA0415/HlagHDi+O9ehdaDN8="
     },
     "which-key.nvim": {
       "type": "Git",
