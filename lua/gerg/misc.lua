@@ -166,3 +166,11 @@ vim.api.nvim_create_autocmd("User", {
     vim.opt.spell = false
   end,
 })
+
+vim.api.nvim_create_autocmd("FileType", {
+  pattern = { "markdown", "quarto", "rmd" },
+  callback = function()
+    vim.opt_local.foldmethod = "manual"
+    vim.opt_local.foldexpr = "0"
+  end,
+})

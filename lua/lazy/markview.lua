@@ -1,6 +1,6 @@
 return {
   "markview.nvim",
-  lazy = false,
+  ft = { "markdown", "quarto", "rmd" },
   after = function()
     require("markview").setup({
       experimental = {
