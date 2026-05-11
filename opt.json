@@ -133,18 +133,18 @@
       "url": "https://api.github.com/repos/L3MON4D3/luasnip/tarball/refs/tags/v2.5.0",
       "hash": "sha256-diZO1on0rlSp6XuNGN2lNa85rhkNe1QQOejJD+LKkZk="
     },
-    "markview.nvim": {
+    "markdown-preview.nvim": {
       "type": "Git",
       "repository": {
         "type": "GitHub",
-        "owner": "OXY2DEV",
-        "repo": "markview.nvim"
+        "owner": "iamcco",
+        "repo": "markdown-preview.nvim"
       },
-      "branch": "main",
+      "branch": "master",
       "submodules": false,
-      "revision": "dbf74b6db11c1468d5128a38b26b6d99dc7316e9",
-      "url": "https://github.com/OXY2DEV/markview.nvim/archive/dbf74b6db11c1468d5128a38b26b6d99dc7316e9.tar.gz",
-      "hash": "sha256-OTbIZY8RuQB7kON5GwDqkV2aLCyy+OiLf0DKjvgl0yE="
+      "revision": "a923f5fc5ba36a3b17e289dc35dc17f66d0548ee",
+      "url": "https://github.com/iamcco/markdown-preview.nvim/archive/a923f5fc5ba36a3b17e289dc35dc17f66d0548ee.tar.gz",
+      "hash": "sha256-TBXdG/Ih5DusAYZJyn37zVqHcMD85VkjrCoLyTo/KBg="
     },
     "neogit": {
       "type": "Git",

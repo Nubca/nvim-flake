@@ -83,7 +83,7 @@ return {
       {
         "<leader>lgD",
         "<cmd>lua vim.lsp.buf.declaration()<CR>",
-        desc = "Decleration",
+        desc = "Declaration",
       },
       {
         "<leader>lgd",
