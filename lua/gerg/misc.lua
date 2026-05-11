@@ -169,8 +169,12 @@ vim.api.nvim_create_autocmd("User", {
 
 vim.api.nvim_create_autocmd("FileType", {
   pattern = { "markdown", "quarto", "rmd" },
-  callback = function()
+  callback = function(args)
     vim.opt_local.foldmethod = "manual"
     vim.opt_local.foldexpr = "0"
+    pcall(vim.treesitter.stop, args.buf)
+    pcall(function()
+      require("treesitter-context").disable()
+    end)
   end,
 })

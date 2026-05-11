@@ -99,6 +99,10 @@ return {
 
       require('treesitter-context').setup {
         max_lines = 3,
+        on_attach = function(buf)
+          local ft = vim.bo[buf].filetype
+          return not vim.tbl_contains({ "markdown", "quarto", "rmd" }, ft)
+        end,
       }
 
       require('ts_context_commentstring').setup {
