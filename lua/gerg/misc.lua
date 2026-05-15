@@ -167,6 +167,8 @@ vim.api.nvim_create_autocmd("User", {
   end,
 })
 
+-- Markdown-like buffers can trigger unstable Treesitter/context parsing, so
+-- fall back to non-Treesitter behavior there.
 vim.api.nvim_create_autocmd("FileType", {
   pattern = { "markdown", "quarto", "rmd" },
   callback = function(args)
