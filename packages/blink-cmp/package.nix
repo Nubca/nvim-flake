@@ -1,19 +1,23 @@
 {
   rustPlatform,
   fetchFromGitHub,
+  lib,
+  stdenv,
+  rust-jemalloc-sys,
 }:
 rustPlatform.buildRustPackage {
   pname = "blink.cmp";
-  version = "1.8.0-unstable-2025-12-31";
+  version = "0-unstable-2026-05-19";
 
   src = fetchFromGitHub {
     owner = "Saghen";
     repo = "blink.cmp";
-    rev = "10c164bbdf065f9781b6cc2f7d068c016276055b";
-    hash = "sha256-1ZQHLRHM+noppQjxHX6slP/V4SMHsuAwV9kM8QrBNd8=";
+    rev = "35e3923a09ff3db150ceff80004befcbbfa071a0";
+    hash = "sha256-vId9CJ34TYPDkkqq+frTNGMPxJoRanuvYT0SEUrxFWI=";
   };
+  buildInputs = lib.optional stdenv.hostPlatform.isAarch64 rust-jemalloc-sys;
 
-  cargoHash = "sha256-Qdt8O7IGj2HySb1jxsv3m33ZxJg96Ckw26oTEEyQjfs=";
+  cargoHash = "sha256-z8koRYVM9mkgKB6rdZAKIfjZfinVUUpYAW0IvPgmjZ4=";
 
   # Tries to call git
   preBuild = ''
@@ -24,12 +28,10 @@ rustPlatform.buildRustPackage {
     cp -r {lua,plugin} "$out"
     mkdir -p "$out/doc"
     cp 'doc/'*'.txt' "$out/doc/"
-    mkdir -p "$out/target"
-    mv "$out/lib" "$out/target/release"
   '';
 
-  # Uses rust nightly
-  env.RUSTC_BOOTSTRAP = true;
+  env.RUSTFLAGS = lib.optionalString stdenv.hostPlatform.isDarwin "-C link-arg=-undefined -C link-arg=dynamic_lookup";
+
   # Don't move /doc to $out/share
   forceShare = [ ];
 }
