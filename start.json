@@ -13,6 +13,19 @@
       "url": "https://github.com/nvim-neorocks/lz.n/archive/c9891469e10c06f3d883dec33bb52568e8372d0a.tar.gz",
       "hash": "sha256-pVBfvwxlWQRlxAYuC98hKT8m2P08NqqLbltzIgzuXeo="
     },
+    "blink.lib": {
+      "type": "Git",
+      "repository": {
+        "type": "GitHub",
+        "owner": "saghen",
+        "repo": "blink.lib"
+      },
+      "branch": "main",
+      "submodules": false,
+      "revision": "f29d8bac6549bc1e7d699c83f680823d7def98bd",
+      "url": "https://github.com/saghen/blink.lib/archive/f29d8bac6549bc1e7d699c83f680823d7def98bd.tar.gz",
+      "hash": "sha256-3XsqX4CGj8VI5tGLWJoUiyo+u7AyNp2IO9hEwQsF1I8="
+    },
     "nvim-treesitter": {
       "type": "Git",
       "repository": {
