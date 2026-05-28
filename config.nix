@@ -45,12 +45,7 @@
 
     startAttrs = inputs.mnw.lib.npinsToPluginsAttrs pkgs ./start.json;
 
-    start = [
-      pkgs.vimPlugins.nvim-treesitter.withAllGrammars.dependencies
-      pkgs.vimPlugins.nvim-treesitter-textobjects
-      pkgs.vimPlugins.nvim-treesitter-context
-      pkgs.vimPlugins.nvim-ts-context-commentstring
-    ];
+    start = pkgs.vimPlugins.nvim-treesitter.withAllGrammars.dependencies;
 
     optAttrs = {
       "blink.cmp" = inputs.self.packages.${pkgs.stdenv.system}.blink-cmp;
