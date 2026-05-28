@@ -10,12 +10,7 @@
       type = "github";
       owner = "nix-community";
       repo = "neovim-nightly-overlay";
-    };
-    flake-compat = {
-      type = "github";
-      owner = "edolstra";
-      repo = "flake-compat";
-      flake = false;
+      inputs.nixpkgs.follows = "nixpkgs";
     };
     mnw = {
       type = "github";
@@ -27,12 +22,6 @@
       owner = "nix-systems";
       repo = "default";
     };
-    npins = {
-      type = "github";
-      owner = "andir";
-      repo = "npins";
-      flake = false;
-    };
   };
 
   outputs =
@@ -41,7 +30,6 @@
       nixpkgs,
       mnw,
       systems,
-      npins,
       ...
     }@inputs:
     let
@@ -80,8 +68,7 @@
         {
           default = pkgs.mkShellNoCC {
             packages = [
-              self.packages.${system}.default.devMode
-              self.formatter.${system}
+              pkgs.npins
               (pkgs.writeShellScriptBin "opt" ''
                 npins --lock-file opt.json "$@"
               '')
@@ -101,11 +88,12 @@
         {
           default = self.packages.${system}.neovim;
 
+          dev = self.packages.${system}.default.devMode;
+          inherit (self.packages.${system}.default) configDir;
+
           blink-cmp = pkgs.callPackage ./packages/blink-cmp/package.nix { };
 
           neovim = mnw.lib.wrap { inherit pkgs inputs; } ./config.nix;
-
-          npins = pkgs.callPackage (npins + /npins.nix) { };
         }
       );
     };
