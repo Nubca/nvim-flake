@@ -1,18 +1,5 @@
 {
   "pins": {
-    "lz.n": {
-      "type": "Git",
-      "repository": {
-        "type": "GitHub",
-        "owner": "nvim-neorocks",
-        "repo": "lz.n"
-      },
-      "branch": "main",
-      "submodules": false,
-      "revision": "c9891469e10c06f3d883dec33bb52568e8372d0a",
-      "url": "https://github.com/nvim-neorocks/lz.n/archive/c9891469e10c06f3d883dec33bb52568e8372d0a.tar.gz",
-      "hash": "sha256-pVBfvwxlWQRlxAYuC98hKT8m2P08NqqLbltzIgzuXeo="
-    },
     "blink.lib": {
       "type": "Git",
       "repository": {
@@ -22,9 +9,22 @@
       },
       "branch": "main",
       "submodules": false,
-      "revision": "f29d8bac6549bc1e7d699c83f680823d7def98bd",
-      "url": "https://github.com/saghen/blink.lib/archive/f29d8bac6549bc1e7d699c83f680823d7def98bd.tar.gz",
-      "hash": "sha256-3XsqX4CGj8VI5tGLWJoUiyo+u7AyNp2IO9hEwQsF1I8="
+      "revision": "c09dd66e9ad97e1a7777f3fa5f0504ca2e877231",
+      "url": "https://github.com/saghen/blink.lib/archive/c09dd66e9ad97e1a7777f3fa5f0504ca2e877231.tar.gz",
+      "hash": "sha256-XdRBLCobPACUOCQ0vmj6A9JSxVMLW11s3/aIn7uuBw0="
+    },
+    "lz.n": {
+      "type": "Git",
+      "repository": {
+        "type": "GitHub",
+        "owner": "nvim-neorocks",
+        "repo": "lz.n"
+      },
+      "branch": "main",
+      "submodules": false,
+      "revision": "2921662169716ea8f7a3747ffc05a8f80deb4ec6",
+      "url": "https://github.com/nvim-neorocks/lz.n/archive/2921662169716ea8f7a3747ffc05a8f80deb4ec6.tar.gz",
+      "hash": "sha256-EOkHlRYSXOgZYK2QaPiTsOevgPesGuNZCCT5MA8rJ3M="
     },
     "nvim-treesitter": {
       "type": "Git",
@@ -103,9 +103,9 @@
       },
       "branch": "master",
       "submodules": false,
-      "revision": "1c0a9994bb6bb5b43859c67924aabd061c4b7905",
-      "url": "https://github.com/bluz71/vim-moonfly-colors/archive/1c0a9994bb6bb5b43859c67924aabd061c4b7905.tar.gz",
-      "hash": "sha256-x3IbuNHg+y0NtNguJnWCpz3bsj9aR41ecTToUYFQlNM="
+      "revision": "261664f92ed51cf0c077555b2d4b2530307eac17",
+      "url": "https://github.com/bluz71/vim-moonfly-colors/archive/261664f92ed51cf0c077555b2d4b2530307eac17.tar.gz",
+      "hash": "sha256-g7Tjm3a1aAbEQocSK1iDRamXivq1AwWlD6Q0X6vphNU="
     },
     "which-key.nvim": {
       "type": "Git",
