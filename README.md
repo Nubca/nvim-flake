@@ -1,6 +1,9 @@
 # NeoVim Flake
 Using my own [Minimal NeoVim Wrapper](https://github.com/Gerg-L/mnw)
 
+For the current project layout, local update workflow, and Neovim-specific
+maintenance notes, see [docs/current-state.md](docs/current-state.md).
+
 # Test it out
 With flakes enabled
 ```console
@@ -83,4 +86,3 @@ My lua config is not very good so I recommend writing your own
 - [@wiltaylor's](https://github.com/wiltaylor) [neovim-flake](https://github.com/wiltaylor/neovim-flake)
 - [@jordanisaacs's](https://github.com/jordanisaacs) [neovim-flake](https://github.com/jordanisaacs/neovim-flake)
 - [@gvolpe's](https://github.com/gvolpe) [neovim-flake](https://github.com/gvolpe/neovim-flake)
-
