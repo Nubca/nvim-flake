@@ -9,9 +9,10 @@
       },
       "branch": "main",
       "submodules": false,
-      "revision": "b127d48bf8e9ac9cf41f6e0fbead317503f76558",
-      "url": "https://github.com/saghen/blink.lib/archive/b127d48bf8e9ac9cf41f6e0fbead317503f76558.tar.gz",
-      "hash": "sha256-YlvnmeKny7pGL5+tAqtZK84WxJ/vKwCMG5CP9xJEnUg="
+      "revision": "f29d8bac6549bc1e7d699c83f680823d7def98bd",
+      "url": "https://github.com/saghen/blink.lib/archive/f29d8bac6549bc1e7d699c83f680823d7def98bd.tar.gz",
+      "hash": "sha256-3XsqX4CGj8VI5tGLWJoUiyo+u7AyNp2IO9hEwQsF1I8=",
+      "frozen": true
     },
     "lz.n": {
       "type": "Git",

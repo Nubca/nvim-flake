@@ -175,6 +175,13 @@ Completion is configured in `lua/lazy/blink.lua`. `blink.cmp` is loaded on
 `DeferredUIEnter`, integrates with `lazydev`, uses `lspkind` and
 `nvim-web-devicons` for icons, and uses the Rust fuzzy implementation.
 
+`blink.cmp` v2 and `blink.lib` are version-coupled. Because `blink.cmp` is
+packaged separately in `packages/blink-cmp/package.nix`, keep the `blink.lib`
+pin in `start.json` aligned with the `blink-lib` revision in that exact
+`blink.cmp` source revision's `flake.lock`. Updating `blink.lib` independently
+can cause configuration-schema errors such as valid keymap entries being
+reported as unknown fields.
+
 ## Verification
 
 Useful checks after edits:
