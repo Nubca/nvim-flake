@@ -12,8 +12,6 @@ under `lua/` and `after/` for the editor behavior.
   `mnw.lib.wrap { inherit pkgs inputs; } ./config.nix`.
 - `start.json` pins start plugins.
 - `opt.json` pins optional/lazy-loaded plugins.
-- `npins-to-plugins.nix` is a temporary local compatibility shim for npins
-  lock schema versions 7 and 8.
 - `packages/blink-cmp/package.nix` packages `blink.cmp` separately from npins.
 - `lua/gerg/` contains always-loaded Lua configuration.
 - `lua/lazy/` contains `lz.n` plugin specs.
@@ -73,28 +71,9 @@ start update
 opt update
 ```
 
-The current `npins` lock schema is version 8. At the time this note was added,
-upstream `mnw.lib.npinsToPluginsAttrs` still asserted `json.version == 7`.
-`npins-to-plugins.nix` exists to preserve update capability until upstream
-`mnw` supports version 8 directly.
-
-When upstream `mnw` supports version 8, remove the local shim by changing
-`config.nix` back to:
-
-```nix
-startAttrs = inputs.mnw.lib.npinsToPluginsAttrs pkgs ./start.json;
-optAttrs = {
-  "blink.cmp" = inputs.self.packages.${pkgs.stdenv.system}.blink-cmp;
-}
-// inputs.mnw.lib.npinsToPluginsAttrs pkgs ./opt.json;
-```
-
-Then delete `npins-to-plugins.nix` and verify with:
-
-```console
-nix eval .#packages.x86_64-linux.neovim.pname
-nix build .#neovim --no-link
-```
+The current `npins` lock schema is version 8. The locked `mnw` revision
+supports schema versions 7 and 8 directly through
+`mnw.lib.npinsToPluginsAttrs`, so no local compatibility shim is required.
 
 ## Updating Dependencies
 
@@ -225,8 +204,7 @@ nix shell nixpkgs#nixfmt -c nixfmt path/to/file.nix
 - This repo is usually edited directly at `/files1/Sources/nvim-flake`.
 - New files must be tracked or staged before Nix flake evaluation can see them.
 - Do not run `npins init` here; this project uses `start.json` and `opt.json`.
-- Do not replace the local npins shim until upstream `mnw` supports the current
-  npins schema.
+- Keep the locked `mnw` revision compatible with the current npins schema.
 - Prefer small changes and verify with `nix eval` before a full build.
 - Use the existing `lz.n` spec style instead of introducing another plugin
   manager.
