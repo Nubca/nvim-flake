@@ -180,7 +180,9 @@ packaged separately in `packages/blink-cmp/package.nix`, keep the `blink.lib`
 pin in `start.json` aligned with the `blink-lib` revision in that exact
 `blink.cmp` source revision's `flake.lock`. Updating `blink.lib` independently
 can cause configuration-schema errors such as valid keymap entries being
-reported as unknown fields.
+reported as unknown fields. The `blink.lib` pin is currently frozen so routine
+`start update` runs cannot advance it independently. Update and refreeze it
+only when updating the packaged `blink.cmp` revision in lockstep.
 
 ## Verification
 
