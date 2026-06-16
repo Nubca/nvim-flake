@@ -101,25 +101,6 @@ the same broad maintenance categories on a schedule:
 - `npins` updates for `start.json` and `opt.json`
 - `nix-update` for `blink-cmp`
 
-### Temporary Neovim CVE Patch Workaround
-
-As of June 12, 2026, `config.nix` filters
-`CVE-2026-11487.patch` from the `neovim-nightly` derivation. Nixpkgs revision
-`9ae611a455b90cf061d8f332b977e387bda8e1ca` backports that fix, but nightly
-Neovim revision `3ed78daf83aa88003f52234e6b493c9718b2d987` already contains it, causing
-the patch phase to fail because the patch was previously applied.
-
-After updating `nixpkgs` and `neovim-nightly`, test whether the workaround can
-be removed. Restore the normal configuration:
-
-```nix
-inherit (inputs.neovim-nightly.packages.${pkgs.stdenv.system}) neovim;
-```
-
-Then run `nix build .#neovim --no-link`. Keep the simpler configuration if it
-builds; the workaround is no longer necessary once nixpkgs stops adding the
-backport to a nightly source that already includes the fix.
-
 ## Neovim Configuration Shape
 
 Base editor settings live in `lua/gerg/misc.lua`. Notable behavior:

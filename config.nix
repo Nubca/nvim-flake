@@ -5,13 +5,7 @@
   ...
 }:
 {
-  neovim = inputs.neovim-nightly.packages.${pkgs.stdenv.system}.neovim.overrideAttrs (old: {
-    # The nightly source already contains this fix, so the nixpkgs backport no
-    # longer applies until nixpkgs removes it from the Neovim package.
-    patches = builtins.filter (
-      patch: !lib.hasSuffix "-CVE-2026-11487.patch" (toString patch)
-    ) old.patches;
-  });
+  inherit (inputs.neovim-nightly.packages.${pkgs.stdenv.system}) neovim;
 
   appName = "gerg";
 
