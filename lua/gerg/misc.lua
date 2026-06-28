@@ -77,10 +77,10 @@ WK.add({ " ", "<Nop>", { silent = true, remap = false } })
 vim.g.mapleader = " "
 
 -- Remap for dealing with word wrap
-vim.keymap.set('n', 'k', "v:count == 0 ? 'gk' : 'k'", { expr = true, silent = true })
-vim.keymap.set('n', 'j', "v:count == 0 ? 'gj' : 'j'", { expr = true, silent = true })
-vim.keymap.set('n', 'gj', 'j')
-vim.keymap.set('n', 'gk', 'k')
+-- vim.keymap.set('n', 'k', "v:count == 0 ? 'gk' : 'k'", { expr = true, silent = true })
+-- vim.keymap.set('n', 'j', "v:count == 0 ? 'gj' : 'j'", { expr = true, silent = true })
+-- vim.keymap.set('n', 'gj', 'j')
+-- vim.keymap.set('n', 'gk', 'k')
 
 --theming
 vim.opt.termguicolors = true
