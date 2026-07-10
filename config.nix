@@ -5,7 +5,9 @@
   ...
 }:
 {
-  inherit (inputs.neovim-nightly.packages.${pkgs.stdenv.system}) neovim;
+  neovim = inputs.neovim-nightly.packages.${pkgs.stdenv.system}.neovim.overrideAttrs (_: {
+    doCheck = false;
+  });
 
   appName = "gerg";
 
