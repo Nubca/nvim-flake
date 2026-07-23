@@ -48,9 +48,9 @@
       },
       "branch": "main",
       "submodules": false,
-      "revision": "532d463f5c83595192fe740572d8fd6902b2217a",
-      "url": "https://github.com/ibhagwan/fzf-lua/archive/532d463f5c83595192fe740572d8fd6902b2217a.tar.gz",
-      "hash": "sha256-ASLKVzjREpJw4e1IJXZXgS56SU8KuUOLlWR0R+xLxvM="
+      "revision": "eced685813841391087fd65f896fc6ce6339a809",
+      "url": "https://github.com/ibhagwan/fzf-lua/archive/eced685813841391087fd65f896fc6ce6339a809.tar.gz",
+      "hash": "sha256-GDmoLMGuDtO37lPySiyfzvVSolmNZOATSmK9rW9rwV8="
     },
     "gitsigns.nvim": {
       "type": "Git",
@@ -155,9 +155,9 @@
       },
       "branch": "master",
       "submodules": false,
-      "revision": "f8674ec894315c02449b61c9de9a116c5aafeb90",
-      "url": "https://github.com/NeogitOrg/neogit/archive/f8674ec894315c02449b61c9de9a116c5aafeb90.tar.gz",
-      "hash": "sha256-ETu9zy2In3M8/3fqYUfTRt0mKiocm3paJFjgQ82Yj3I="
+      "revision": "2043096b7ae81e8350ec8cceb3e7ab08dca1dcfe",
+      "url": "https://github.com/NeogitOrg/neogit/archive/2043096b7ae81e8350ec8cceb3e7ab08dca1dcfe.tar.gz",
+      "hash": "sha256-Hv1D71QN11v7kyJ/UVlh0/unGOaItXwY/mXIT1jHqaU="
     },
     "noice.nvim": {
       "type": "Git",
@@ -220,9 +220,9 @@
       },
       "branch": "master",
       "submodules": false,
-      "revision": "e7ca2c95ba316a8b846d3f3546d407908c5c4ccb",
-      "url": "https://github.com/neovim/nvim-lspconfig/archive/e7ca2c95ba316a8b846d3f3546d407908c5c4ccb.tar.gz",
-      "hash": "sha256-UucKVsXkORQ1USvb3cgZ29lipUkwZzXeEFou1U7tx9A="
+      "revision": "b89138d9af0a96e6048e202a15765fc6b6416bd4",
+      "url": "https://github.com/neovim/nvim-lspconfig/archive/b89138d9af0a96e6048e202a15765fc6b6416bd4.tar.gz",
+      "hash": "sha256-d1vDEfiNSo9ccSPqTHEFqXVFCPhp/0ZozTzcyLiJrGg="
     },
     "nvim-navic": {
       "type": "Git",
@@ -275,9 +275,9 @@
       },
       "branch": "master",
       "submodules": false,
-      "revision": "0ca28b61a04fe7426cefbdd52c2647ef0e335b5f",
-      "url": "https://github.com/nvim-tree/nvim-web-devicons/archive/0ca28b61a04fe7426cefbdd52c2647ef0e335b5f.tar.gz",
-      "hash": "sha256-mPCzq1F4sxrsXjWfLYdvKQmw7oXMs3h8h19qfj5ey1E="
+      "revision": "2ae6958df7ced50baac5035cec0c15799eedfbf7",
+      "url": "https://github.com/nvim-tree/nvim-web-devicons/archive/2ae6958df7ced50baac5035cec0c15799eedfbf7.tar.gz",
+      "hash": "sha256-/NTrUcytMahe5wZUjVO9a4D9vooKtAQu/cKgOugeZNk="
     },
     "oil.nvim": {
       "type": "Git",
