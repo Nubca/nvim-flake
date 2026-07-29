@@ -48,9 +48,9 @@
       },
       "branch": "main",
       "submodules": false,
-      "revision": "9ad7340dcc6d2afc30e64fb4088597c7573ed62c",
-      "url": "https://github.com/ibhagwan/fzf-lua/archive/9ad7340dcc6d2afc30e64fb4088597c7573ed62c.tar.gz",
-      "hash": "sha256-d1/mZYYKBAwI9yZXl52h9m2ghaW+RUdQvUFg3opnCbM="
+      "revision": "28440c741e927592877514fba3db21eb188caec8",
+      "url": "https://github.com/ibhagwan/fzf-lua/archive/28440c741e927592877514fba3db21eb188caec8.tar.gz",
+      "hash": "sha256-B32cd/T+7rKXklsXcK6WdGbMjIuNHXRZLC4tv+WMBmE="
     },
     "gitsigns.nvim": {
       "type": "Git",
@@ -155,9 +155,9 @@
       },
       "branch": "master",
       "submodules": false,
-      "revision": "8cdf050f8037456c58f32a8917d705c5ce35a938",
-      "url": "https://github.com/NeogitOrg/neogit/archive/8cdf050f8037456c58f32a8917d705c5ce35a938.tar.gz",
-      "hash": "sha256-nXkBSeF62FOrgZ1ae6pNvk/Mz68WSNallDh/c0/IZ+A="
+      "revision": "37e0f22a2345bad1bffe01b31970885882f46275",
+      "url": "https://github.com/NeogitOrg/neogit/archive/37e0f22a2345bad1bffe01b31970885882f46275.tar.gz",
+      "hash": "sha256-oyGGEbBCGr9mYeaG7siHl/Zz2HOBEKEkhQuwmJ2eA3o="
     },
     "noice.nvim": {
       "type": "Git",
@@ -220,9 +220,9 @@
       },
       "branch": "master",
       "submodules": false,
-      "revision": "d592c1e6ad9a0a01b3d5ed3f0345d68407167181",
-      "url": "https://github.com/neovim/nvim-lspconfig/archive/d592c1e6ad9a0a01b3d5ed3f0345d68407167181.tar.gz",
-      "hash": "sha256-yrIZFI/ZraWska4HKBHwvKZVAiGjmSIi5uf/vzpeR4c="
+      "revision": "b7b920947f21339ee41fbb38c79d6445e12900aa",
+      "url": "https://github.com/neovim/nvim-lspconfig/archive/b7b920947f21339ee41fbb38c79d6445e12900aa.tar.gz",
+      "hash": "sha256-Z7e3xBk+tMarnn4u15nw1KWfy6GG/l50jeTC1EjpUKM="
     },
     "nvim-navic": {
       "type": "Git",
