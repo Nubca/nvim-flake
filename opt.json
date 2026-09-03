@@ -35,9 +35,9 @@
       },
       "branch": "main",
       "submodules": false,
-      "revision": "694357861ec9ebf12475ddcdd04ea45a0923c32d",
-      "url": "https://github.com/Saecki/crates.nvim/archive/694357861ec9ebf12475ddcdd04ea45a0923c32d.tar.gz",
-      "hash": "sha256-+6rC+bticNgMhZ+2lkPpitunSv4nHmBzCIj6ngt7gaA="
+      "revision": "b8281be336498035f9288d6542b2881a7140a9ec",
+      "url": "https://github.com/Saecki/crates.nvim/archive/b8281be336498035f9288d6542b2881a7140a9ec.tar.gz",
+      "hash": "sha256-kZoKu5rCSymcafN6tlgx5mdnjWB0+oCxYulBcEp8Ut8="
     },
     "fzf-lua": {
       "type": "Git",
@@ -74,9 +74,9 @@
       },
       "branch": "master",
       "submodules": false,
-      "revision": "d28a3f70721c79e3c5f6693057ae929f3d9c0a03",
-      "url": "https://github.com/lukas-reineke/indent-blankline.nvim/archive/d28a3f70721c79e3c5f6693057ae929f3d9c0a03.tar.gz",
-      "hash": "sha256-Vc79ff416uJFqKH8zlM1y208SxaQGpQPqGVbiz5Vflg="
+      "revision": "3b1ee1854c1067c34cad2423eb78e280d4069e01",
+      "url": "https://github.com/lukas-reineke/indent-blankline.nvim/archive/3b1ee1854c1067c34cad2423eb78e280d4069e01.tar.gz",
+      "hash": "sha256-qc2Wv1VsoVxEurNtEBfoztBOa5SkbWoW4zMX2SMYV0k="
     },
     "lazydev.nvim": {
       "type": "Git",
@@ -220,9 +220,9 @@
       },
       "branch": "master",
       "submodules": false,
-      "revision": "bbe6b383a1e85d3a84b54a43f7d9d83567c150cb",
-      "url": "https://github.com/neovim/nvim-lspconfig/archive/bbe6b383a1e85d3a84b54a43f7d9d83567c150cb.tar.gz",
-      "hash": "sha256-cneLBLJ+f9M35i2H72leANKvzMeTYnlEd8SzbbN+yGk="
+      "revision": "85e732c62ac59ab7c12df71ddd020baa87948390",
+      "url": "https://github.com/neovim/nvim-lspconfig/archive/85e732c62ac59ab7c12df71ddd020baa87948390.tar.gz",
+      "hash": "sha256-zSHf3z0+RnctRSNPa+EZicXSc8Fuh33xbF9FYOAGbTI="
     },
     "nvim-navic": {
       "type": "Git",
@@ -233,9 +233,9 @@
       },
       "branch": "master",
       "submodules": false,
-      "revision": "f5eba192f39b453675d115351808bd51276d9de5",
-      "url": "https://github.com/SmiteshP/nvim-navic/archive/f5eba192f39b453675d115351808bd51276d9de5.tar.gz",
-      "hash": "sha256-rRUlGtClq4NmyDqg0NhytnxFDMVpQhuF5cPKKRJHl88="
+      "revision": "455808fd0fae06e6d70fadfd61432275db8f34ce",
+      "url": "https://github.com/SmiteshP/nvim-navic/archive/455808fd0fae06e6d70fadfd61432275db8f34ce.tar.gz",
+      "hash": "sha256-5wyC0cWuWBHg0xPFQpunOKc5wEoI5wW6pXU6i1uED6k="
     },
     "nvim-notify": {
       "type": "Git",
@@ -301,9 +301,9 @@
       },
       "branch": "master",
       "submodules": false,
-      "revision": "012f1480cd9a5fc99fce7678e0a536421a53fc46",
-      "url": "https://github.com/HiPhish/rainbow-delimiters.nvim/archive/012f1480cd9a5fc99fce7678e0a536421a53fc46.tar.gz",
-      "hash": "sha256-gd7GI/vkj2af+6Fj319aDKUl21ifyGykDWh61aWV/SY="
+      "revision": "48d380ba4e24f6d5086f81aa255ff63c37fbfb91",
+      "url": "https://github.com/HiPhish/rainbow-delimiters.nvim/archive/48d380ba4e24f6d5086f81aa255ff63c37fbfb91.tar.gz",
+      "hash": "sha256-WPN5q/50l/9qkzLYZ1SfbdaaygC9N6EcbX8b3ZiW274="
     },
     "sqlite.lua": {
       "type": "GitRelease",
