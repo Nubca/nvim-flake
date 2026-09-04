@@ -74,9 +74,9 @@
       },
       "branch": "master",
       "submodules": false,
-      "revision": "3b1ee1854c1067c34cad2423eb78e280d4069e01",
-      "url": "https://github.com/lukas-reineke/indent-blankline.nvim/archive/3b1ee1854c1067c34cad2423eb78e280d4069e01.tar.gz",
-      "hash": "sha256-qc2Wv1VsoVxEurNtEBfoztBOa5SkbWoW4zMX2SMYV0k="
+      "revision": "f1e186e44d3b7f9ae918008e2c28ce37c6023d2d",
+      "url": "https://github.com/lukas-reineke/indent-blankline.nvim/archive/f1e186e44d3b7f9ae918008e2c28ce37c6023d2d.tar.gz",
+      "hash": "sha256-vVzaXiVgpn/CbgFSXOPHwaTdnKxW9fbI2Sse+BiJczw="
     },
     "lazydev.nvim": {
       "type": "Git",
@@ -220,9 +220,9 @@
       },
       "branch": "master",
       "submodules": false,
-      "revision": "85e732c62ac59ab7c12df71ddd020baa87948390",
-      "url": "https://github.com/neovim/nvim-lspconfig/archive/85e732c62ac59ab7c12df71ddd020baa87948390.tar.gz",
-      "hash": "sha256-zSHf3z0+RnctRSNPa+EZicXSc8Fuh33xbF9FYOAGbTI="
+      "revision": "84252f9832fb5b9024fe9f7258e7c2aff915e6fb",
+      "url": "https://github.com/neovim/nvim-lspconfig/archive/84252f9832fb5b9024fe9f7258e7c2aff915e6fb.tar.gz",
+      "hash": "sha256-qPB4WPkkSgwCQ8bIoHZbyca14xkeay81Dm382jdi/80="
     },
     "nvim-navic": {
       "type": "Git",
@@ -301,9 +301,9 @@
       },
       "branch": "master",
       "submodules": false,
-      "revision": "48d380ba4e24f6d5086f81aa255ff63c37fbfb91",
-      "url": "https://github.com/HiPhish/rainbow-delimiters.nvim/archive/48d380ba4e24f6d5086f81aa255ff63c37fbfb91.tar.gz",
-      "hash": "sha256-WPN5q/50l/9qkzLYZ1SfbdaaygC9N6EcbX8b3ZiW274="
+      "revision": "7d7645f06751501fc9a17986c934e6354a71019b",
+      "url": "https://github.com/HiPhish/rainbow-delimiters.nvim/archive/7d7645f06751501fc9a17986c934e6354a71019b.tar.gz",
+      "hash": "sha256-HLlVzgMjif12KsFzMa3YLzJF06mCiILhzliOHz9htzQ="
     },
     "sqlite.lua": {
       "type": "GitRelease",
