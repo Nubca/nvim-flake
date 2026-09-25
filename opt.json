@@ -48,9 +48,9 @@
       },
       "branch": "main",
       "submodules": false,
-      "revision": "13bb178a299f7493dd64427a58e61904c4b58ecb",
-      "url": "https://github.com/ibhagwan/fzf-lua/archive/13bb178a299f7493dd64427a58e61904c4b58ecb.tar.gz",
-      "hash": "sha256-/fsaxbviG9Grd7VIhusX7o1TlKJBUDZZ51qKkqT2gV4="
+      "revision": "78b85d2a522b1e6a2d154216b3e532a1df1ad6d7",
+      "url": "https://github.com/ibhagwan/fzf-lua/archive/78b85d2a522b1e6a2d154216b3e532a1df1ad6d7.tar.gz",
+      "hash": "sha256-meX6n2vvPb9ztSJIpEn5GkSJ6Q/7M9qMN+UYVRUZ9ME="
     },
     "gitsigns.nvim": {
       "type": "Git",
