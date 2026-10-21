@@ -23,9 +23,9 @@
       },
       "branch": "main",
       "submodules": false,
-      "revision": "a5be3da63d4fc3b9243d54961e28d02e97deb65d",
-      "url": "https://github.com/nvim-neorocks/lz.n/archive/a5be3da63d4fc3b9243d54961e28d02e97deb65d.tar.gz",
-      "hash": "sha256-jhje/J/+2n7b987HwLNyVVVYMQs2P9nQd4IuvogUt08="
+      "revision": "c368ae2c6cc6b58a598adcee2cbfc36d341053f2",
+      "url": "https://github.com/nvim-neorocks/lz.n/archive/c368ae2c6cc6b58a598adcee2cbfc36d341053f2.tar.gz",
+      "hash": "sha256-xDnDNRzGndbGr+IvJXhSle3eOz/qrC/uywqrRGx8280="
     },
     "nvim-treesitter": {
       "type": "Git",
